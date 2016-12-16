@@ -1,0 +1,1119 @@
+vagrant@vagrant-ubuntu-trusty-64:~$ sysdig -r cap.scap.gz0 proc.pid=23457 
+1430105 14:39:53.673685956 0 mesos-executor (23457) < clone res=0 exe=mesos-executor args=--launcher_dir=/usr/local/libexec/mesos. tid=23457(mesos-executor) pid=23457(mesos-executor) ptid=12419(mesos-executor) cwd= fdlimit=1024 pgft_maj=0 pgft_min=1 vm_size=894576 vm_rss=4856 vm_swap=0 comm=mesos-executor cgroups=cpuset=/.cpu_cgroup=/mesos/669c5880-0cee-4c33-ade1-1bd506b6b9d1.cpuacct=/meso... flags=0 uid=0 gid=0 vtid=23457(mesos-executor) vpid=23457(mesos-executor) 
+1430110 14:39:53.673708289 0 mesos-executor (23457) > set_robust_list 
+1430111 14:39:53.673709785 0 mesos-executor (23457) < set_robust_list 
+1430133 14:39:53.674055485 0 mesos-executor (23457) > close fd=9(<p>) 
+1430134 14:39:53.674058277 0 mesos-executor (23457) < close res=0 
+1430135 14:39:53.674059458 0 mesos-executor (23457) > close fd=11(<p>) 
+1430136 14:39:53.674060601 0 mesos-executor (23457) < close res=0 
+1430137 14:39:53.674081167 0 mesos-executor (23457) > dup fd=8(<f>/dev/null) 
+1430138 14:39:53.674083293 0 mesos-executor (23457) < dup res=0(<f>/dev/null) 
+1430139 14:39:53.674084478 0 mesos-executor (23457) > dup fd=10(<p>) 
+1430140 14:39:53.674085758 0 mesos-executor (23457) < dup res=1(<p>) 
+1430141 14:39:53.674086759 0 mesos-executor (23457) > dup fd=12(<p>) 
+1430142 14:39:53.674087838 0 mesos-executor (23457) < dup res=2(<p>) 
+1430143 14:39:53.674089003 0 mesos-executor (23457) > close fd=8(<f>/dev/null) 
+1430144 14:39:53.674090205 0 mesos-executor (23457) < close res=0 
+1430145 14:39:53.674091211 0 mesos-executor (23457) > close fd=10(<p>) 
+1430146 14:39:53.674092215 0 mesos-executor (23457) < close res=0 
+1430147 14:39:53.674094077 0 mesos-executor (23457) > close fd=12(<p>) 
+1430148 14:39:53.674095060 0 mesos-executor (23457) < close res=0 
+1430149 14:39:53.674145049 0 mesos-executor (23457) > execve 
+1430150 14:39:53.674159724 0 mesos-executor (23457) > switch next=13 pgft_maj=0 pgft_min=401 vm_size=894576 vm_rss=6188 vm_swap=0 
+1430260 14:39:53.675489136 1 mesos-tcp-conne (23457) < execve res=0 exe=/usr/local/libexec/mesos/mesos-tcp-connect args=--ip=127.0.0.1.--port=31523. tid=23457(mesos-tcp-conne) pid=23457(mesos-tcp-conne) ptid=12419(mesos-executor) cwd= fdlimit=1024 pgft_maj=0 pgft_min=405 vm_size=584 vm_rss=4 vm_swap=0 comm=mesos-tcp-conne cgroups=cpuset=/.cpu_cgroup=/mesos/669c5880-0cee-4c33-ade1-1bd506b6b9d1.cpuacct=/meso... env=PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin.PORT0=31523... 
+1430261 14:39:53.675519135 1 mesos-tcp-conne (23457) > brk addr=0 
+1430262 14:39:53.675520734 1 mesos-tcp-conne (23457) < brk res=132D000 vm_size=584 vm_rss=4 vm_swap=0 
+1430263 14:39:53.675531806 1 mesos-tcp-conne (23457) > access mode=0(F_OK) 
+1430264 14:39:53.675536949 1 mesos-tcp-conne (23457) < access res=-2(ENOENT) name=/etc/ld.so.nohwcap 
+1430265 14:39:53.675539303 1 mesos-tcp-conne (23457) > mmap addr=0 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=4294967295 offset=0 
+1430266 14:39:53.675541387 1 mesos-tcp-conne (23457) < mmap res=7F0969DE4000 vm_size=592 vm_rss=4 vm_swap=0 
+1430267 14:39:53.675547983 1 mesos-tcp-conne (23457) > access mode=4(R_OK) 
+1430268 14:39:53.675551990 1 mesos-tcp-conne (23457) < access res=-2(ENOENT) name=/etc/ld.so.preload 
+1430269 14:39:53.675560300 1 mesos-tcp-conne (23457) > open 
+1430270 14:39:53.675564289 1 mesos-tcp-conne (23457) < open fd=3(<f>/etc/ld.so.cache) name=/etc/ld.so.cache flags=4097(O_RDONLY|O_CLOEXEC) mode=0 
+1430271 14:39:53.675565884 1 mesos-tcp-conne (23457) > fstat fd=3(<f>/etc/ld.so.cache) 
+1430272 14:39:53.675568110 1 mesos-tcp-conne (23457) < fstat res=0 
+1430273 14:39:53.675569231 1 mesos-tcp-conne (23457) > mmap addr=0 length=42048 prot=1(PROT_READ) flags=2(MAP_PRIVATE) fd=3(<f>/etc/ld.so.cache) offset=0 
+1430274 14:39:53.675572933 1 mesos-tcp-conne (23457) < mmap res=7F0969DD9000 vm_size=636 vm_rss=4 vm_swap=0 
+1430275 14:39:53.675573973 1 mesos-tcp-conne (23457) > close fd=3(<f>/etc/ld.so.cache) 
+1430276 14:39:53.675575082 1 mesos-tcp-conne (23457) < close res=0 
+1430277 14:39:53.675578125 1 mesos-tcp-conne (23457) > access mode=0(F_OK) 
+1430278 14:39:53.675579510 1 mesos-tcp-conne (23457) < access res=-2(ENOENT) name=/etc/ld.so.nohwcap 
+1430279 14:39:53.675584696 1 mesos-tcp-conne (23457) > open 
+1430280 14:39:53.675588675 1 mesos-tcp-conne (23457) < open fd=3(<f>/usr/local/lib/libmesos-1.2.0.so) name=/usr/local/lib/libmesos-1.2.0.so flags=4097(O_RDONLY|O_CLOEXEC) mode=0 
+1430281 14:39:53.675589874 1 mesos-tcp-conne (23457) > read fd=3(<f>/usr/local/lib/libmesos-1.2.0.so) size=832 
+1430282 14:39:53.675591923 1 mesos-tcp-conne (23457) < read res=832 data=.ELF..............>.....P.......@...................@.8...@.&.#................. 
+1430283 14:39:53.675595473 1 mesos-tcp-conne (23457) > fstat fd=3(<f>/usr/local/lib/libmesos-1.2.0.so) 
+1430284 14:39:53.675596543 1 mesos-tcp-conne (23457) < fstat res=0 
+1430285 14:39:53.675599320 1 mesos-tcp-conne (23457) > mmap addr=0 length=113415264 prot=5(PROT_READ|PROT_EXEC) flags=1026(MAP_PRIVATE|MAP_DENYWRITE) fd=3(<f>/usr/local/lib/libmesos-1.2.0.so) offset=0 
+1430286 14:39:53.675603460 1 mesos-tcp-conne (23457) < mmap res=7F0962F9A000 vm_size=111396 vm_rss=4 vm_swap=0 
+1430287 14:39:53.675604530 1 mesos-tcp-conne (23457) > mprotect 
+1430288 14:39:53.675612460 1 mesos-tcp-conne (23457) < mprotect 
+1430289 14:39:53.675614327 1 mesos-tcp-conne (23457) > mmap addr=7F0969972000 length=2338816 prot=3(PROT_READ|PROT_WRITE) flags=1030(MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE) fd=3(<f>/usr/local/lib/libmesos-1.2.0.so) offset=108888064 
+1430290 14:39:53.675620039 1 mesos-tcp-conne (23457) < mmap res=7F0969972000 vm_size=111396 vm_rss=172 vm_swap=0 
+1430291 14:39:53.675623552 1 mesos-tcp-conne (23457) > mmap addr=7F0969BAD000 length=91232 prot=3(PROT_READ|PROT_WRITE) flags=14(MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS) fd=4294967295 offset=0 
+1430292 14:39:53.675625734 1 mesos-tcp-conne (23457) < mmap res=7F0969BAD000 vm_size=111396 vm_rss=176 vm_swap=0 
+1430293 14:39:53.675631165 1 mesos-tcp-conne (23457) > close fd=3(<f>/usr/local/lib/libmesos-1.2.0.so) 
+1430294 14:39:53.675632779 1 mesos-tcp-conne (23457) < close res=0 
+1430295 14:39:53.675638282 1 mesos-tcp-conne (23457) > access mode=0(F_OK) 
+1430296 14:39:53.675640587 1 mesos-tcp-conne (23457) < access res=-2(ENOENT) name=/etc/ld.so.nohwcap 
+1430297 14:39:53.675642556 1 mesos-tcp-conne (23457) > open 
+1430298 14:39:53.675646384 1 mesos-tcp-conne (23457) < open fd=3(<f>/lib/x86_64-linux-gnu/libpthread.so.0) name=/lib/x86_64-linux-gnu/libpthread.so.0 flags=4097(O_RDONLY|O_CLOEXEC) mode=0 
+1430299 14:39:53.675647647 1 mesos-tcp-conne (23457) > read fd=3(<f>/lib/x86_64-linux-gnu/libpthread.so.0) size=832 
+1430300 14:39:53.675649207 1 mesos-tcp-conne (23457) < read res=832 data=.ELF..............>.....po......@.......h...........@.8...@.%.".........@....... 
+1430301 14:39:53.675650681 1 mesos-tcp-conne (23457) > fstat fd=3(<f>/lib/x86_64-linux-gnu/libpthread.so.0) 
+1430302 14:39:53.675651879 1 mesos-tcp-conne (23457) < fstat res=0 
+1430303 14:39:53.675653383 1 mesos-tcp-conne (23457) > mmap addr=0 length=2217264 prot=5(PROT_READ|PROT_EXEC) flags=1026(MAP_PRIVATE|MAP_DENYWRITE) fd=3(<f>/lib/x86_64-linux-gnu/libpthread.so.0) offset=0 
+1430304 14:39:53.675657696 1 mesos-tcp-conne (23457) < mmap res=7F0962D7C000 vm_size=113564 vm_rss=176 vm_swap=0 
+1430305 14:39:53.675658748 1 mesos-tcp-conne (23457) > mprotect 
+1430306 14:39:53.675664753 1 mesos-tcp-conne (23457) < mprotect 
+1430307 14:39:53.675665791 1 mesos-tcp-conne (23457) > mmap addr=7F0962F94000 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=1030(MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE) fd=3(<f>/lib/x86_64-linux-gnu/libpthread.so.0) offset=98304 
+1430308 14:39:53.675670394 1 mesos-tcp-conne (23457) < mmap res=7F0962F94000 vm_size=113564 vm_rss=192 vm_swap=0 
+1430309 14:39:53.675673826 1 mesos-tcp-conne (23457) > mmap addr=7F0962F96000 length=13616 prot=3(PROT_READ|PROT_WRITE) flags=14(MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS) fd=4294967295 offset=0 
+1430310 14:39:53.675675679 1 mesos-tcp-conne (23457) < mmap res=7F0962F96000 vm_size=113564 vm_rss=196 vm_swap=0 
+1430311 14:39:53.675680243 1 mesos-tcp-conne (23457) > close fd=3(<f>/lib/x86_64-linux-gnu/libpthread.so.0) 
+1430312 14:39:53.675681763 1 mesos-tcp-conne (23457) < close res=0 
+1430313 14:39:53.675685796 1 mesos-tcp-conne (23457) > access mode=0(F_OK) 
+1430314 14:39:53.675687947 1 mesos-tcp-conne (23457) < access res=-2(ENOENT) name=/etc/ld.so.nohwcap 
+1430315 14:39:53.675690561 1 mesos-tcp-conne (23457) > open 
+1430316 14:39:53.675695297 1 mesos-tcp-conne (23457) < open fd=3(<f>/usr/lib/x86_64-linux-gnu/libstdc++.so.6) name=/usr/lib/x86_64-linux-gnu/libstdc++.so.6 flags=4097(O_RDONLY|O_CLOEXEC) mode=0 
+1430317 14:39:53.675696567 1 mesos-tcp-conne (23457) > read fd=3(<f>/usr/lib/x86_64-linux-gnu/libstdc++.so.6) size=832 
+1430318 14:39:53.675698224 1 mesos-tcp-conne (23457) < read res=832 data=.ELF..............>..... .......@...................@.8...@..................... 
+1430319 14:39:53.675699526 1 mesos-tcp-conne (23457) > fstat fd=3(<f>/usr/lib/x86_64-linux-gnu/libstdc++.so.6) 
+1430320 14:39:53.675700686 1 mesos-tcp-conne (23457) < fstat res=0 
+1430321 14:39:53.675701855 1 mesos-tcp-conne (23457) > mmap addr=0 length=4096 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=4294967295 offset=0 
+1430322 14:39:53.675703554 1 mesos-tcp-conne (23457) < mmap res=7F0969DD8000 vm_size=113568 vm_rss=196 vm_swap=0 
+1430323 14:39:53.675706128 1 mesos-tcp-conne (23457) > mmap addr=0 length=3159040 prot=5(PROT_READ|PROT_EXEC) flags=1026(MAP_PRIVATE|MAP_DENYWRITE) fd=3(<f>/usr/lib/x86_64-linux-gnu/libstdc++.so.6) offset=0 
+1430324 14:39:53.675707754 1 mesos-tcp-conne (23457) < mmap res=7F0962A78000 vm_size=116656 vm_rss=196 vm_swap=0 
+1430325 14:39:53.675707756 1 mesos-tcp-conne (23457) > mprotect 
+1430326 14:39:53.675750357 1 mesos-tcp-conne (23457) < mprotect 
+1430327 14:39:53.675751616 1 mesos-tcp-conne (23457) > mmap addr=7F0962D5D000 length=40960 prot=3(PROT_READ|PROT_WRITE) flags=1030(MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE) fd=3(<f>/usr/lib/x86_64-linux-gnu/libstdc++.so.6) offset=937984 
+1430328 14:39:53.675757300 1 mesos-tcp-conne (23457) < mmap res=7F0962D5D000 vm_size=116656 vm_rss=216 vm_swap=0 
+1430329 14:39:53.675760763 1 mesos-tcp-conne (23457) > mmap addr=7F0962D67000 length=82944 prot=3(PROT_READ|PROT_WRITE) flags=14(MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS) fd=4294967295 offset=0 
+1430330 14:39:53.675762634 1 mesos-tcp-conne (23457) < mmap res=7F0962D67000 vm_size=116656 vm_rss=220 vm_swap=0 
+1430331 14:39:53.675767840 1 mesos-tcp-conne (23457) > close fd=3(<f>/usr/lib/x86_64-linux-gnu/libstdc++.so.6) 
+1430332 14:39:53.675769524 1 mesos-tcp-conne (23457) < close res=0 
+1430333 14:39:53.675774028 1 mesos-tcp-conne (23457) > access mode=0(F_OK) 
+1430334 14:39:53.675777102 1 mesos-tcp-conne (23457) < access res=-2(ENOENT) name=/etc/ld.so.nohwcap 
+1430335 14:39:53.675780490 1 mesos-tcp-conne (23457) > open 
+1430336 14:39:53.675783700 1 mesos-tcp-conne (23457) < open fd=3(<f>/lib/x86_64-linux-gnu/libgcc_s.so.1) name=/lib/x86_64-linux-gnu/libgcc_s.so.1 flags=4097(O_RDONLY|O_CLOEXEC) mode=0 
+1430337 14:39:53.675784975 1 mesos-tcp-conne (23457) > read fd=3(<f>/lib/x86_64-linux-gnu/libgcc_s.so.1) size=832 
+1430338 14:39:53.675787299 1 mesos-tcp-conne (23457) < read res=832 data=.ELF..............>......*......@....... Y..........@.8...@..................... 
+1430339 14:39:53.675788688 1 mesos-tcp-conne (23457) > fstat fd=3(<f>/lib/x86_64-linux-gnu/libgcc_s.so.1) 
+1430340 14:39:53.675789927 1 mesos-tcp-conne (23457) < fstat res=0 
+1430341 14:39:53.675791501 1 mesos-tcp-conne (23457) > mmap addr=0 length=2185952 prot=5(PROT_READ|PROT_EXEC) flags=1026(MAP_PRIVATE|MAP_DENYWRITE) fd=3(<f>/lib/x86_64-linux-gnu/libgcc_s.so.1) offset=0 
+1430342 14:39:53.675795210 1 mesos-tcp-conne (23457) < mmap res=7F0962862000 vm_size=118792 vm_rss=220 vm_swap=0 
+1430343 14:39:53.675796261 1 mesos-tcp-conne (23457) > mprotect 
+1430344 14:39:53.675800538 1 mesos-tcp-conne (23457) < mprotect 
+1430345 14:39:53.675801554 1 mesos-tcp-conne (23457) > mmap addr=7F0962A77000 length=4096 prot=3(PROT_READ|PROT_WRITE) flags=1030(MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE) fd=3(<f>/lib/x86_64-linux-gnu/libgcc_s.so.1) offset=86016 
+1430346 14:39:53.675805870 1 mesos-tcp-conne (23457) < mmap res=7F0962A77000 vm_size=118792 vm_rss=240 vm_swap=0 
+1430347 14:39:53.675809349 1 mesos-tcp-conne (23457) > close fd=3(<f>/lib/x86_64-linux-gnu/libgcc_s.so.1) 
+1430348 14:39:53.675810302 1 mesos-tcp-conne (23457) < close res=0 
+1430349 14:39:53.675813249 1 mesos-tcp-conne (23457) > access mode=0(F_OK) 
+1430350 14:39:53.675815023 1 mesos-tcp-conne (23457) < access res=-2(ENOENT) name=/etc/ld.so.nohwcap 
+1430351 14:39:53.675817481 1 mesos-tcp-conne (23457) > open 
+1430352 14:39:53.675820656 1 mesos-tcp-conne (23457) < open fd=3(<f>/lib/x86_64-linux-gnu/libc.so.6) name=/lib/x86_64-linux-gnu/libc.so.6 flags=4097(O_RDONLY|O_CLOEXEC) mode=0 
+1430353 14:39:53.675821859 1 mesos-tcp-conne (23457) > read fd=3(<f>/lib/x86_64-linux-gnu/libc.so.6) size=832 
+1430354 14:39:53.675823387 1 mesos-tcp-conne (23457) < read res=832 data=.ELF..............>.............@....... ...........@.8...@.D.C.........@....... 
+1430355 14:39:53.675824735 1 mesos-tcp-conne (23457) > fstat fd=3(<f>/lib/x86_64-linux-gnu/libc.so.6) 
+1430356 14:39:53.675825788 1 mesos-tcp-conne (23457) < fstat res=0 
+1430357 14:39:53.675827360 1 mesos-tcp-conne (23457) > mmap addr=0 length=3949248 prot=5(PROT_READ|PROT_EXEC) flags=1026(MAP_PRIVATE|MAP_DENYWRITE) fd=3(<f>/lib/x86_64-linux-gnu/libc.so.6) offset=0 
+1430358 14:39:53.675831651 1 mesos-tcp-conne (23457) < mmap res=7F096249D000 vm_size=122652 vm_rss=240 vm_swap=0 
+1430359 14:39:53.675832729 1 mesos-tcp-conne (23457) > mprotect 
+1430360 14:39:53.675840292 1 mesos-tcp-conne (23457) < mprotect 
+1430361 14:39:53.675841311 1 mesos-tcp-conne (23457) > mmap addr=7F0962857000 length=24576 prot=3(PROT_READ|PROT_WRITE) flags=1030(MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE) fd=3(<f>/lib/x86_64-linux-gnu/libc.so.6) offset=1810432 
+1430362 14:39:53.675846057 1 mesos-tcp-conne (23457) < mmap res=7F0962857000 vm_size=122652 vm_rss=256 vm_swap=0 
+1430363 14:39:53.675849585 1 mesos-tcp-conne (23457) > mmap addr=7F096285D000 length=17088 prot=3(PROT_READ|PROT_WRITE) flags=14(MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS) fd=4294967295 offset=0 
+1430364 14:39:53.675851248 1 mesos-tcp-conne (23457) < mmap res=7F096285D000 vm_size=122652 vm_rss=260 vm_swap=0 
+1430365 14:39:53.675855962 1 mesos-tcp-conne (23457) > close fd=3(<f>/lib/x86_64-linux-gnu/libc.so.6) 
+1430366 14:39:53.675857567 1 mesos-tcp-conne (23457) < close res=0 
+1430367 14:39:53.675862112 1 mesos-tcp-conne (23457) > access mode=0(F_OK) 
+1430368 14:39:53.675864626 1 mesos-tcp-conne (23457) < access res=-2(ENOENT) name=/etc/ld.so.nohwcap 
+1430369 14:39:53.675866324 1 mesos-tcp-conne (23457) > open 
+1430370 14:39:53.675870673 1 mesos-tcp-conne (23457) < open fd=3(<f>/usr/lib/x86_64-linux-gnu/libsvn_delta-1.so.1) name=/usr/lib/x86_64-linux-gnu/libsvn_delta-1.so.1 flags=4097(O_RDONLY|O_CLOEXEC) mode=0 
+1430371 14:39:53.675871981 1 mesos-tcp-conne (23457) > read fd=3(<f>/usr/lib/x86_64-linux-gnu/libsvn_delta-1.so.1) size=832 
+1430372 14:39:53.675873562 1 mesos-tcp-conne (23457) < read res=832 data=.ELF..............>......8......@........$..........@.8...@..................... 
+1430373 14:39:53.675875072 1 mesos-tcp-conne (23457) > fstat fd=3(<f>/usr/lib/x86_64-linux-gnu/libsvn_delta-1.so.1) 
+1430374 14:39:53.675876276 1 mesos-tcp-conne (23457) < fstat res=0 
+1430375 14:39:53.675877520 1 mesos-tcp-conne (23457) > mmap addr=0 length=4096 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=4294967295 offset=0 
+1430376 14:39:53.675879618 1 mesos-tcp-conne (23457) < mmap res=7F0969DD7000 vm_size=122656 vm_rss=260 vm_swap=0 
+1430377 14:39:53.675883100 1 mesos-tcp-conne (23457) > mmap addr=0 length=2171816 prot=5(PROT_READ|PROT_EXEC) flags=1026(MAP_PRIVATE|MAP_DENYWRITE) fd=3(<f>/usr/lib/x86_64-linux-gnu/libsvn_delta-1.so.1) offset=0 
+1430378 14:39:53.675886896 1 mesos-tcp-conne (23457) < mmap res=7F096228A000 vm_size=124780 vm_rss=260 vm_swap=0 
+1430379 14:39:53.675887931 1 mesos-tcp-conne (23457) > mprotect 
+1430380 14:39:53.675892714 1 mesos-tcp-conne (23457) < mprotect 
+1430381 14:39:53.675893732 1 mesos-tcp-conne (23457) > mmap addr=7F096249B000 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=1030(MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE) fd=3(<f>/usr/lib/x86_64-linux-gnu/libsvn_delta-1.so.1) offset=69632 
+1430382 14:39:53.675898285 1 mesos-tcp-conne (23457) < mmap res=7F096249B000 vm_size=124780 vm_rss=280 vm_swap=0 
+1430383 14:39:53.675904815 1 mesos-tcp-conne (23457) > close fd=3(<f>/usr/lib/x86_64-linux-gnu/libsvn_delta-1.so.1) 
+1430384 14:39:53.675906298 1 mesos-tcp-conne (23457) < close res=0 
+1430385 14:39:53.675910293 1 mesos-tcp-conne (23457) > access mode=0(F_OK) 
+1430386 14:39:53.675912629 1 mesos-tcp-conne (23457) < access res=-2(ENOENT) name=/etc/ld.so.nohwcap 
+1430387 14:39:53.675914142 1 mesos-tcp-conne (23457) > open 
+1430388 14:39:53.675917487 1 mesos-tcp-conne (23457) < open fd=3(<f>/usr/lib/x86_64-linux-gnu/libsvn_subr-1.so.1) name=/usr/lib/x86_64-linux-gnu/libsvn_subr-1.so.1 flags=4097(O_RDONLY|O_CLOEXEC) mode=0 
+1430389 14:39:53.675918744 1 mesos-tcp-conne (23457) > read fd=3(<f>/usr/lib/x86_64-linux-gnu/libsvn_subr-1.so.1) size=832 
+1430390 14:39:53.675920326 1 mesos-tcp-conne (23457) < read res=832 data=.ELF..............>.....0m......@.......(\..........@.8...@..................... 
+1430391 14:39:53.675921641 1 mesos-tcp-conne (23457) > fstat fd=3(<f>/usr/lib/x86_64-linux-gnu/libsvn_subr-1.so.1) 
+1430392 14:39:53.675922805 1 mesos-tcp-conne (23457) < fstat res=0 
+1430393 14:39:53.675924308 1 mesos-tcp-conne (23457) > mmap addr=0 length=2579384 prot=5(PROT_READ|PROT_EXEC) flags=1026(MAP_PRIVATE|MAP_DENYWRITE) fd=3(<f>/usr/lib/x86_64-linux-gnu/libsvn_subr-1.so.1) offset=0 
+1430394 14:39:53.675928091 1 mesos-tcp-conne (23457) < mmap res=7F0962014000 vm_size=127300 vm_rss=280 vm_swap=0 
+1430395 14:39:53.675929293 1 mesos-tcp-conne (23457) > mprotect 
+1430396 14:39:53.675936348 1 mesos-tcp-conne (23457) < mprotect 
+1430397 14:39:53.675937368 1 mesos-tcp-conne (23457) > mmap addr=7F0962286000 length=16384 prot=3(PROT_READ|PROT_WRITE) flags=1030(MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE) fd=3(<f>/usr/lib/x86_64-linux-gnu/libsvn_subr-1.so.1) offset=466944 
+1430398 14:39:53.675941616 1 mesos-tcp-conne (23457) < mmap res=7F0962286000 vm_size=127300 vm_rss=296 vm_swap=0 
+1430399 14:39:53.675947937 1 mesos-tcp-conne (23457) > close fd=3(<f>/usr/lib/x86_64-linux-gnu/libsvn_subr-1.so.1) 
+1430400 14:39:53.675949373 1 mesos-tcp-conne (23457) < close res=0 
+1430401 14:39:53.675953427 1 mesos-tcp-conne (23457) > access mode=0(F_OK) 
+1430402 14:39:53.675955610 1 mesos-tcp-conne (23457) < access res=-2(ENOENT) name=/etc/ld.so.nohwcap 
+1430403 14:39:53.675957462 1 mesos-tcp-conne (23457) > open 
+1430404 14:39:53.675964476 1 mesos-tcp-conne (23457) < open fd=3(<f>/usr/lib/x86_64-linux-gnu/libsasl2.so.2) name=/usr/lib/x86_64-linux-gnu/libsasl2.so.2 flags=4097(O_RDONLY|O_CLOEXEC) mode=0 
+1430405 14:39:53.675965732 1 mesos-tcp-conne (23457) > read fd=3(<f>/usr/lib/x86_64-linux-gnu/libsasl2.so.2) size=832 
+1430406 14:39:53.675967187 1 mesos-tcp-conne (23457) < read res=832 data=.ELF..............>.....`+......@.......0...........@.8...@..................... 
+1430407 14:39:53.675968446 1 mesos-tcp-conne (23457) > fstat fd=3(<f>/usr/lib/x86_64-linux-gnu/libsasl2.so.2) 
+1430408 14:39:53.675969600 1 mesos-tcp-conne (23457) < fstat res=0 
+1430409 14:39:53.675971009 1 mesos-tcp-conne (23457) > mmap addr=0 length=2204624 prot=5(PROT_READ|PROT_EXEC) flags=1026(MAP_PRIVATE|MAP_DENYWRITE) fd=3(<f>/usr/lib/x86_64-linux-gnu/libsasl2.so.2) offset=0 
+1430410 14:39:53.675975142 1 mesos-tcp-conne (23457) < mmap res=7F0961DF9000 vm_size=129456 vm_rss=296 vm_swap=0 
+1430411 14:39:53.675976284 1 mesos-tcp-conne (23457) > mprotect 
+1430412 14:39:53.675983499 1 mesos-tcp-conne (23457) < mprotect 
+1430413 14:39:53.675984523 1 mesos-tcp-conne (23457) > mmap addr=7F0962012000 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=1030(MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE) fd=3(<f>/usr/lib/x86_64-linux-gnu/libsasl2.so.2) offset=102400 
+1430414 14:39:53.675987727 1 mesos-tcp-conne (23457) < mmap res=7F0962012000 vm_size=129456 vm_rss=312 vm_swap=0 
+1430415 14:39:53.675996031 1 mesos-tcp-conne (23457) > close fd=3(<f>/usr/lib/x86_64-linux-gnu/libsasl2.so.2) 
+1430416 14:39:53.676006469 1 mesos-tcp-conne (23457) < close res=0 
+1430417 14:39:53.676011257 1 mesos-tcp-conne (23457) > access mode=0(F_OK) 
+1430418 14:39:53.676013845 1 mesos-tcp-conne (23457) < access res=-2(ENOENT) name=/etc/ld.so.nohwcap 
+1430419 14:39:53.676015734 1 mesos-tcp-conne (23457) > open 
+1430420 14:39:53.676020179 1 mesos-tcp-conne (23457) < open fd=3(<f>/usr/lib/x86_64-linux-gnu/libcurl-nss.so.4) name=/usr/lib/x86_64-linux-gnu/libcurl-nss.so.4 flags=4097(O_RDONLY|O_CLOEXEC) mode=0 
+1430421 14:39:53.676021443 1 mesos-tcp-conne (23457) > read fd=3(<f>/usr/lib/x86_64-linux-gnu/libcurl-nss.so.4) size=832 
+1430422 14:39:53.676023427 1 mesos-tcp-conne (23457) < read res=832 data=.ELF..............>.............@........z..........@.8...@..................... 
+1430423 14:39:53.676024817 1 mesos-tcp-conne (23457) > fstat fd=3(<f>/usr/lib/x86_64-linux-gnu/libcurl-nss.so.4) 
+1430424 14:39:53.676026042 1 mesos-tcp-conne (23457) < fstat res=0 
+1430425 14:39:53.676027261 1 mesos-tcp-conne (23457) > mmap addr=0 length=4096 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=4294967295 offset=0 
+1430426 14:39:53.676029658 1 mesos-tcp-conne (23457) < mmap res=7F0969DD6000 vm_size=129460 vm_rss=312 vm_swap=0 
+1430427 14:39:53.676032211 1 mesos-tcp-conne (23457) > mmap addr=0 length=2522216 prot=5(PROT_READ|PROT_EXEC) flags=1026(MAP_PRIVATE|MAP_DENYWRITE) fd=3(<f>/usr/lib/x86_64-linux-gnu/libcurl-nss.so.4) offset=0 
+1430428 14:39:53.676035964 1 mesos-tcp-conne (23457) < mmap res=7F0961B91000 vm_size=131924 vm_rss=312 vm_swap=0 
+1430429 14:39:53.676036999 1 mesos-tcp-conne (23457) > mprotect 
+1430430 14:39:53.676044586 1 mesos-tcp-conne (23457) < mprotect 
+1430431 14:39:53.676045661 1 mesos-tcp-conne (23457) > mmap addr=7F0961DF6000 length=12288 prot=3(PROT_READ|PROT_WRITE) flags=1030(MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE) fd=3(<f>/usr/lib/x86_64-linux-gnu/libcurl-nss.so.4) offset=413696 
+1430432 14:39:53.676049756 1 mesos-tcp-conne (23457) < mmap res=7F0961DF6000 vm_size=131924 vm_rss=332 vm_swap=0 
+1430433 14:39:53.676068442 1 mesos-tcp-conne (23457) > close fd=3(<f>/usr/lib/x86_64-linux-gnu/libcurl-nss.so.4) 
+1430434 14:39:53.676080800 1 mesos-tcp-conne (23457) < close res=0 
+1430435 14:39:53.676089817 1 mesos-tcp-conne (23457) > access mode=0(F_OK) 
+1430436 14:39:53.676094365 1 mesos-tcp-conne (23457) < access res=-2(ENOENT) name=/etc/ld.so.nohwcap 
+1430437 14:39:53.676096977 1 mesos-tcp-conne (23457) > open 
+1430438 14:39:53.676103732 1 mesos-tcp-conne (23457) < open fd=3(<f>/usr/lib/x86_64-linux-gnu/libapr-1.so.0) name=/usr/lib/x86_64-linux-gnu/libapr-1.so.0 flags=4097(O_RDONLY|O_CLOEXEC) mode=0 
+1430439 14:39:53.676105535 1 mesos-tcp-conne (23457) > read fd=3(<f>/usr/lib/x86_64-linux-gnu/libapr-1.so.0) size=832 
+1430440 14:39:53.676108382 1 mesos-tcp-conne (23457) < read res=832 data=.ELF..............>.............@...................@.8...@..................... 
+1430441 14:39:53.676110661 1 mesos-tcp-conne (23457) > fstat fd=3(<f>/usr/lib/x86_64-linux-gnu/libapr-1.so.0) 
+1430442 14:39:53.676112525 1 mesos-tcp-conne (23457) < fstat res=0 
+1430443 14:39:53.676114675 1 mesos-tcp-conne (23457) > mmap addr=0 length=2296216 prot=5(PROT_READ|PROT_EXEC) flags=1026(MAP_PRIVATE|MAP_DENYWRITE) fd=3(<f>/usr/lib/x86_64-linux-gnu/libapr-1.so.0) offset=0 
+1430444 14:39:53.676120458 1 mesos-tcp-conne (23457) < mmap res=7F0961960000 vm_size=134168 vm_rss=332 vm_swap=0 
+1430445 14:39:53.676122033 1 mesos-tcp-conne (23457) > mprotect 
+1430446 14:39:53.676129909 1 mesos-tcp-conne (23457) < mprotect 
+1430447 14:39:53.676131524 1 mesos-tcp-conne (23457) > mmap addr=7F0961B8F000 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=1030(MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE) fd=3(<f>/usr/lib/x86_64-linux-gnu/libapr-1.so.0) offset=192512 
+1430448 14:39:53.676137990 1 mesos-tcp-conne (23457) < mmap res=7F0961B8F000 vm_size=134168 vm_rss=348 vm_swap=0 
+1430449 14:39:53.676148670 1 mesos-tcp-conne (23457) > close fd=3(<f>/usr/lib/x86_64-linux-gnu/libapr-1.so.0) 
+1430450 14:39:53.676151416 1 mesos-tcp-conne (23457) < close res=0 
+1430451 14:39:53.676159612 1 mesos-tcp-conne (23457) > access mode=0(F_OK) 
+1430452 14:39:53.676163346 1 mesos-tcp-conne (23457) < access res=-2(ENOENT) name=/etc/ld.so.nohwcap 
+1430453 14:39:53.676165908 1 mesos-tcp-conne (23457) > open 
+1430454 14:39:53.676170906 1 mesos-tcp-conne (23457) < open fd=3(<f>/lib/x86_64-linux-gnu/libz.so.1) name=/lib/x86_64-linux-gnu/libz.so.1 flags=4097(O_RDONLY|O_CLOEXEC) mode=0 
+1430455 14:39:53.676172340 1 mesos-tcp-conne (23457) > read fd=3(<f>/lib/x86_64-linux-gnu/libz.so.1) size=832 
+1430456 14:39:53.676174159 1 mesos-tcp-conne (23457) < read res=832 data=.ELF..............>.............@.......x...........@.8...@..................... 
+1430457 14:39:53.676175690 1 mesos-tcp-conne (23457) > fstat fd=3(<f>/lib/x86_64-linux-gnu/libz.so.1) 
+1430458 14:39:53.676177101 1 mesos-tcp-conne (23457) < fstat res=0 
+1430459 14:39:53.676178668 1 mesos-tcp-conne (23457) > mmap addr=0 length=2195784 prot=5(PROT_READ|PROT_EXEC) flags=1026(MAP_PRIVATE|MAP_DENYWRITE) fd=3(<f>/lib/x86_64-linux-gnu/libz.so.1) offset=0 
+1430460 14:39:53.676183073 1 mesos-tcp-conne (23457) < mmap res=7F0961747000 vm_size=136316 vm_rss=348 vm_swap=0 
+1430461 14:39:53.676184206 1 mesos-tcp-conne (23457) > mprotect 
+1430462 14:39:53.676190399 1 mesos-tcp-conne (23457) < mprotect 
+1430463 14:39:53.676191494 1 mesos-tcp-conne (23457) > mmap addr=7F096195E000 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=1030(MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE) fd=3(<f>/lib/x86_64-linux-gnu/libz.so.1) offset=94208 
+1430464 14:39:53.676196837 1 mesos-tcp-conne (23457) < mmap res=7F096195E000 vm_size=136316 vm_rss=364 vm_swap=0 
+1430465 14:39:53.676204245 1 mesos-tcp-conne (23457) > close fd=3(<f>/lib/x86_64-linux-gnu/libz.so.1) 
+1430466 14:39:53.676205923 1 mesos-tcp-conne (23457) < close res=0 
+1430467 14:39:53.676210642 1 mesos-tcp-conne (23457) > access mode=0(F_OK) 
+1430468 14:39:53.676213382 1 mesos-tcp-conne (23457) < access res=-2(ENOENT) name=/etc/ld.so.nohwcap 
+1430469 14:39:53.676215022 1 mesos-tcp-conne (23457) > open 
+1430470 14:39:53.676218161 1 mesos-tcp-conne (23457) < open fd=3(<f>/lib/x86_64-linux-gnu/librt.so.1) name=/lib/x86_64-linux-gnu/librt.so.1 flags=4097(O_RDONLY|O_CLOEXEC) mode=0 
+1430471 14:39:53.676219455 1 mesos-tcp-conne (23457) > read fd=3(<f>/lib/x86_64-linux-gnu/librt.so.1) size=832 
+1430472 14:39:53.676221126 1 mesos-tcp-conne (23457) < read res=832 data=.ELF..............>.....P#......@........s..........@.8...@.!. .........@....... 
+1430473 14:39:53.676222554 1 mesos-tcp-conne (23457) > fstat fd=3(<f>/lib/x86_64-linux-gnu/librt.so.1) 
+1430474 14:39:53.676223777 1 mesos-tcp-conne (23457) < fstat res=0 
+1430475 14:39:53.676225059 1 mesos-tcp-conne (23457) > mmap addr=0 length=4096 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=4294967295 offset=0 
+1430476 14:39:53.676227164 1 mesos-tcp-conne (23457) < mmap res=7F0969DD5000 vm_size=136320 vm_rss=364 vm_swap=0 
+1430477 14:39:53.676229822 1 mesos-tcp-conne (23457) > mmap addr=0 length=2129016 prot=5(PROT_READ|PROT_EXEC) flags=1026(MAP_PRIVATE|MAP_DENYWRITE) fd=3(<f>/lib/x86_64-linux-gnu/librt.so.1) offset=0 
+1430478 14:39:53.676233557 1 mesos-tcp-conne (23457) < mmap res=7F096153F000 vm_size=138400 vm_rss=364 vm_swap=0 
+1430479 14:39:53.676234665 1 mesos-tcp-conne (23457) > mprotect 
+1430480 14:39:53.676239968 1 mesos-tcp-conne (23457) < mprotect 
+1430481 14:39:53.676241080 1 mesos-tcp-conne (23457) > mmap addr=7F0961745000 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=1030(MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE) fd=3(<f>/lib/x86_64-linux-gnu/librt.so.1) offset=24576 
+1430482 14:39:53.676245610 1 mesos-tcp-conne (23457) < mmap res=7F0961745000 vm_size=138400 vm_rss=384 vm_swap=0 
+1430483 14:39:53.676251942 1 mesos-tcp-conne (23457) > close fd=3(<f>/lib/x86_64-linux-gnu/librt.so.1) 
+1430484 14:39:53.676253453 1 mesos-tcp-conne (23457) < close res=0 
+1430485 14:39:53.676258290 1 mesos-tcp-conne (23457) > access mode=0(F_OK) 
+1430486 14:39:53.676260906 1 mesos-tcp-conne (23457) < access res=-2(ENOENT) name=/etc/ld.so.nohwcap 
+1430487 14:39:53.676262563 1 mesos-tcp-conne (23457) > open 
+1430488 14:39:53.676266317 1 mesos-tcp-conne (23457) < open fd=3(<f>/lib/x86_64-linux-gnu/libm.so.6) name=/lib/x86_64-linux-gnu/libm.so.6 flags=4097(O_RDONLY|O_CLOEXEC) mode=0 
+1430489 14:39:53.676267606 1 mesos-tcp-conne (23457) > read fd=3(<f>/lib/x86_64-linux-gnu/libm.so.6) size=832 
+1430490 14:39:53.676269228 1 mesos-tcp-conne (23457) < read res=832 data=.ELF..............>......V......@.......@R..........@.8...@.............@....... 
+1430491 14:39:53.676270620 1 mesos-tcp-conne (23457) > fstat fd=3(<f>/lib/x86_64-linux-gnu/libm.so.6) 
+1430492 14:39:53.676271829 1 mesos-tcp-conne (23457) < fstat res=0 
+1430493 14:39:53.676273307 1 mesos-tcp-conne (23457) > mmap addr=0 length=3166568 prot=5(PROT_READ|PROT_EXEC) flags=1026(MAP_PRIVATE|MAP_DENYWRITE) fd=3(<f>/lib/x86_64-linux-gnu/libm.so.6) offset=0 
+1430494 14:39:53.676277297 1 mesos-tcp-conne (23457) < mmap res=7F0961239000 vm_size=141496 vm_rss=384 vm_swap=0 
+1430495 14:39:53.676278408 1 mesos-tcp-conne (23457) > mprotect 
+1430496 14:39:53.676283506 1 mesos-tcp-conne (23457) < mprotect 
+1430497 14:39:53.676284590 1 mesos-tcp-conne (23457) > mmap addr=7F096153D000 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=1030(MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE) fd=3(<f>/lib/x86_64-linux-gnu/libm.so.6) offset=1064960 
+1430498 14:39:53.676289179 1 mesos-tcp-conne (23457) < mmap res=7F096153D000 vm_size=141496 vm_rss=400 vm_swap=0 
+1430499 14:39:53.676295955 1 mesos-tcp-conne (23457) > close fd=3(<f>/lib/x86_64-linux-gnu/libm.so.6) 
+1430500 14:39:53.676297519 1 mesos-tcp-conne (23457) < close res=0 
+1430501 14:39:53.676304879 1 mesos-tcp-conne (23457) > access mode=0(F_OK) 
+1430502 14:39:53.676307371 1 mesos-tcp-conne (23457) < access res=-2(ENOENT) name=/etc/ld.so.nohwcap 
+1430503 14:39:53.676309039 1 mesos-tcp-conne (23457) > open 
+1430504 14:39:53.676312688 1 mesos-tcp-conne (23457) < open fd=3(<f>/usr/lib/x86_64-linux-gnu/libaprutil-1.so.0) name=/usr/lib/x86_64-linux-gnu/libaprutil-1.so.0 flags=4097(O_RDONLY|O_CLOEXEC) mode=0 
+1430505 14:39:53.676314058 1 mesos-tcp-conne (23457) > read fd=3(<f>/usr/lib/x86_64-linux-gnu/libaprutil-1.so.0) size=832 
+1430506 14:39:53.676315792 1 mesos-tcp-conne (23457) < read res=832 data=.ELF..............>.............@........h..........@.8...@..................... 
+1430507 14:39:53.676317104 1 mesos-tcp-conne (23457) > fstat fd=3(<f>/usr/lib/x86_64-linux-gnu/libaprutil-1.so.0) 
+1430508 14:39:53.676318303 1 mesos-tcp-conne (23457) < fstat res=0 
+1430509 14:39:53.676319535 1 mesos-tcp-conne (23457) > mmap addr=0 length=4096 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=4294967295 offset=0 
+1430510 14:39:53.676321358 1 mesos-tcp-conne (23457) < mmap res=7F0969DD4000 vm_size=141500 vm_rss=400 vm_swap=0 
+1430511 14:39:53.676323881 1 mesos-tcp-conne (23457) > mmap addr=0 length=2254744 prot=5(PROT_READ|PROT_EXEC) flags=1026(MAP_PRIVATE|MAP_DENYWRITE) fd=3(<f>/usr/lib/x86_64-linux-gnu/libaprutil-1.so.0) offset=0 
+1430512 14:39:53.676327534 1 mesos-tcp-conne (23457) < mmap res=7F0961012000 vm_size=143704 vm_rss=400 vm_swap=0 
+1430513 14:39:53.676328626 1 mesos-tcp-conne (23457) > mprotect 
+1430514 14:39:53.676332956 1 mesos-tcp-conne (23457) < mprotect 
+1430515 14:39:53.676334092 1 mesos-tcp-conne (23457) > mmap addr=7F0961237000 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=1030(MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE) fd=3(<f>/usr/lib/x86_64-linux-gnu/libaprutil-1.so.0) offset=151552 
+1430516 14:39:53.676338677 1 mesos-tcp-conne (23457) < mmap res=7F0961237000 vm_size=143704 vm_rss=420 vm_swap=0 
+1430517 14:39:53.676345228 1 mesos-tcp-conne (23457) > close fd=3(<f>/usr/lib/x86_64-linux-gnu/libaprutil-1.so.0) 
+1430518 14:39:53.676346757 1 mesos-tcp-conne (23457) < close res=0 
+1430519 14:39:53.676353182 1 mesos-tcp-conne (23457) > access mode=0(F_OK) 
+1430520 14:39:53.676356123 1 mesos-tcp-conne (23457) < access res=-2(ENOENT) name=/etc/ld.so.nohwcap 
+1430521 14:39:53.676357943 1 mesos-tcp-conne (23457) > open 
+1430522 14:39:53.676361717 1 mesos-tcp-conne (23457) < open fd=3(<f>/lib/x86_64-linux-gnu/libexpat.so.1) name=/lib/x86_64-linux-gnu/libexpat.so.1 flags=4097(O_RDONLY|O_CLOEXEC) mode=0 
+1430523 14:39:53.676363031 1 mesos-tcp-conne (23457) > read fd=3(<f>/lib/x86_64-linux-gnu/libexpat.so.1) size=832 
+1430524 14:39:53.676364635 1 mesos-tcp-conne (23457) < read res=832 data=.ELF..............>.....`;......@...................@.8...@..................... 
+1430525 14:39:53.676365944 1 mesos-tcp-conne (23457) > fstat fd=3(<f>/lib/x86_64-linux-gnu/libexpat.so.1) 
+1430526 14:39:53.676367150 1 mesos-tcp-conne (23457) < fstat res=0 
+1430527 14:39:53.676368709 1 mesos-tcp-conne (23457) > mmap addr=0 length=2265216 prot=5(PROT_READ|PROT_EXEC) flags=1026(MAP_PRIVATE|MAP_DENYWRITE) fd=3(<f>/lib/x86_64-linux-gnu/libexpat.so.1) offset=0 
+1430528 14:39:53.676372520 1 mesos-tcp-conne (23457) < mmap res=7F0960DE8000 vm_size=145920 vm_rss=420 vm_swap=0 
+1430529 14:39:53.676373628 1 mesos-tcp-conne (23457) > mprotect 
+1430530 14:39:53.676380687 1 mesos-tcp-conne (23457) < mprotect 
+1430531 14:39:53.676381768 1 mesos-tcp-conne (23457) > mmap addr=7F096100F000 length=12288 prot=3(PROT_READ|PROT_WRITE) flags=1030(MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE) fd=3(<f>/lib/x86_64-linux-gnu/libexpat.so.1) offset=159744 
+1430532 14:39:53.676384475 1 mesos-tcp-conne (23457) < mmap res=7F096100F000 vm_size=145920 vm_rss=436 vm_swap=0 
+1430533 14:39:53.676391054 1 mesos-tcp-conne (23457) > close fd=3(<f>/lib/x86_64-linux-gnu/libexpat.so.1) 
+1430534 14:39:53.676392601 1 mesos-tcp-conne (23457) < close res=0 
+1430535 14:39:53.676397592 1 mesos-tcp-conne (23457) > access mode=0(F_OK) 
+1430536 14:39:53.676399949 1 mesos-tcp-conne (23457) < access res=-2(ENOENT) name=/etc/ld.so.nohwcap 
+1430537 14:39:53.676401706 1 mesos-tcp-conne (23457) > open 
+1430538 14:39:53.676405663 1 mesos-tcp-conne (23457) < open fd=3(<f>/usr/lib/x86_64-linux-gnu/libsqlite3.so.0) name=/usr/lib/x86_64-linux-gnu/libsqlite3.so.0 flags=4097(O_RDONLY|O_CLOEXEC) mode=0 
+1430539 14:39:53.676406998 1 mesos-tcp-conne (23457) > read fd=3(<f>/usr/lib/x86_64-linux-gnu/libsqlite3.so.0) size=832 
+1430540 14:39:53.676408783 1 mesos-tcp-conne (23457) < read res=832 data=.ELF..............>.....`.......@.......@~..........@.8...@..................... 
+1430541 14:39:53.676410101 1 mesos-tcp-conne (23457) > fstat fd=3(<f>/usr/lib/x86_64-linux-gnu/libsqlite3.so.0) 
+1430542 14:39:53.676411401 1 mesos-tcp-conne (23457) < fstat res=0 
+1430543 14:39:53.676412991 1 mesos-tcp-conne (23457) > mmap addr=0 length=2851544 prot=5(PROT_READ|PROT_EXEC) flags=1026(MAP_PRIVATE|MAP_DENYWRITE) fd=3(<f>/usr/lib/x86_64-linux-gnu/libsqlite3.so.0) offset=0 
+1430544 14:39:53.676417303 1 mesos-tcp-conne (23457) < mmap res=7F0960B2F000 vm_size=148708 vm_rss=436 vm_swap=0 
+1430545 14:39:53.676418416 1 mesos-tcp-conne (23457) > mprotect 
+1430546 14:39:53.676426490 1 mesos-tcp-conne (23457) < mprotect 
+1430547 14:39:53.676427579 1 mesos-tcp-conne (23457) > mmap addr=7F0960DE3000 length=16384 prot=3(PROT_READ|PROT_WRITE) flags=1030(MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE) fd=3(<f>/usr/lib/x86_64-linux-gnu/libsqlite3.so.0) offset=737280 
+1430548 14:39:53.676430876 1 mesos-tcp-conne (23457) < mmap res=7F0960DE3000 vm_size=148708 vm_rss=452 vm_swap=0 
+1430549 14:39:53.676434216 1 mesos-tcp-conne (23457) > mmap addr=7F0960DE7000 length=728 prot=3(PROT_READ|PROT_WRITE) flags=14(MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS) fd=4294967295 offset=0 
+1430550 14:39:53.676436328 1 mesos-tcp-conne (23457) < mmap res=7F0960DE7000 vm_size=148708 vm_rss=456 vm_swap=0 
+1430551 14:39:53.676441429 1 mesos-tcp-conne (23457) > close fd=3(<f>/usr/lib/x86_64-linux-gnu/libsqlite3.so.0) 
+1430552 14:39:53.676442969 1 mesos-tcp-conne (23457) < close res=0 
+1430553 14:39:53.676448362 1 mesos-tcp-conne (23457) > access mode=0(F_OK) 
+1430554 14:39:53.676451026 1 mesos-tcp-conne (23457) < access res=-2(ENOENT) name=/etc/ld.so.nohwcap 
+1430555 14:39:53.676452799 1 mesos-tcp-conne (23457) > open 
+1430556 14:39:53.676456273 1 mesos-tcp-conne (23457) < open fd=3(<f>/lib/x86_64-linux-gnu/libdl.so.2) name=/lib/x86_64-linux-gnu/libdl.so.2 flags=4097(O_RDONLY|O_CLOEXEC) mode=0 
+1430557 14:39:53.676457563 1 mesos-tcp-conne (23457) > read fd=3(<f>/lib/x86_64-linux-gnu/libdl.so.2) size=832 
+1430558 14:39:53.676459155 1 mesos-tcp-conne (23457) < read res=832 data=.ELF..............>.............@........1..........@.8...@.............@....... 
+1430559 14:39:53.676460539 1 mesos-tcp-conne (23457) > fstat fd=3(<f>/lib/x86_64-linux-gnu/libdl.so.2) 
+1430560 14:39:53.676461737 1 mesos-tcp-conne (23457) < fstat res=0 
+1430561 14:39:53.676463044 1 mesos-tcp-conne (23457) > mmap addr=0 length=4096 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=4294967295 offset=0 
+1430562 14:39:53.676464983 1 mesos-tcp-conne (23457) < mmap res=7F0969DD3000 vm_size=148712 vm_rss=456 vm_swap=0 
+1430563 14:39:53.676467713 1 mesos-tcp-conne (23457) > mmap addr=0 length=2109744 prot=5(PROT_READ|PROT_EXEC) flags=1026(MAP_PRIVATE|MAP_DENYWRITE) fd=3(<f>/lib/x86_64-linux-gnu/libdl.so.2) offset=0 
+1430564 14:39:53.676472192 1 mesos-tcp-conne (23457) < mmap res=7F096092B000 vm_size=150776 vm_rss=456 vm_swap=0 
+1430565 14:39:53.676473275 1 mesos-tcp-conne (23457) > mprotect 
+1430566 14:39:53.676478716 1 mesos-tcp-conne (23457) < mprotect 
+1430567 14:39:53.676479802 1 mesos-tcp-conne (23457) > mmap addr=7F0960B2D000 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=1030(MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE) fd=3(<f>/lib/x86_64-linux-gnu/libdl.so.2) offset=8192 
+1430568 14:39:53.676484191 1 mesos-tcp-conne (23457) < mmap res=7F0960B2D000 vm_size=150776 vm_rss=472 vm_swap=0 
+1430569 14:39:53.676490586 1 mesos-tcp-conne (23457) > close fd=3(<f>/lib/x86_64-linux-gnu/libdl.so.2) 
+1430570 14:39:53.676492073 1 mesos-tcp-conne (23457) < close res=0 
+1430571 14:39:53.676496829 1 mesos-tcp-conne (23457) > access mode=0(F_OK) 
+1430572 14:39:53.676499220 1 mesos-tcp-conne (23457) < access res=-2(ENOENT) name=/etc/ld.so.nohwcap 
+1430573 14:39:53.676501015 1 mesos-tcp-conne (23457) > open 
+1430574 14:39:53.676505353 1 mesos-tcp-conne (23457) < open fd=3(<f>/usr/lib/x86_64-linux-gnu/libidn.so.11) name=/usr/lib/x86_64-linux-gnu/libidn.so.11 flags=4097(O_RDONLY|O_CLOEXEC) mode=0 
+1430575 14:39:53.676506659 1 mesos-tcp-conne (23457) > read fd=3(<f>/usr/lib/x86_64-linux-gnu/libidn.so.11) size=832 
+1430576 14:39:53.676508434 1 mesos-tcp-conne (23457) < read res=832 data=.ELF..............>......+......@........"..........@.8...@..................... 
+1430577 14:39:53.676509799 1 mesos-tcp-conne (23457) > fstat fd=3(<f>/usr/lib/x86_64-linux-gnu/libidn.so.11) 
+1430578 14:39:53.676511020 1 mesos-tcp-conne (23457) < fstat res=0 
+1430579 14:39:53.676512632 1 mesos-tcp-conne (23457) > mmap addr=0 length=2302208 prot=5(PROT_READ|PROT_EXEC) flags=1026(MAP_PRIVATE|MAP_DENYWRITE) fd=3(<f>/usr/lib/x86_64-linux-gnu/libidn.so.11) offset=0 
+1430580 14:39:53.676516671 1 mesos-tcp-conne (23457) < mmap res=7F09606F8000 vm_size=153028 vm_rss=472 vm_swap=0 
+1430581 14:39:53.676517773 1 mesos-tcp-conne (23457) > mprotect 
+1430582 14:39:53.676524864 1 mesos-tcp-conne (23457) < mprotect 
+1430583 14:39:53.676525941 1 mesos-tcp-conne (23457) > mmap addr=7F0960929000 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=1030(MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE) fd=3(<f>/usr/lib/x86_64-linux-gnu/libidn.so.11) offset=200704 
+1430584 14:39:53.676528415 1 mesos-tcp-conne (23457) < mmap res=7F0960929000 vm_size=153028 vm_rss=484 vm_swap=0 
+1430585 14:39:53.676534991 1 mesos-tcp-conne (23457) > close fd=3(<f>/usr/lib/x86_64-linux-gnu/libidn.so.11) 
+1430586 14:39:53.676536560 1 mesos-tcp-conne (23457) < close res=0 
+1430587 14:39:53.676541961 1 mesos-tcp-conne (23457) > access mode=0(F_OK) 
+1430588 14:39:53.676544304 1 mesos-tcp-conne (23457) < access res=-2(ENOENT) name=/etc/ld.so.nohwcap 
+1430589 14:39:53.676546017 1 mesos-tcp-conne (23457) > open 
+1430590 14:39:53.676548971 1 mesos-tcp-conne (23457) < open fd=3(<f>/usr/lib/x86_64-linux-gnu/librtmp.so.0) name=/usr/lib/x86_64-linux-gnu/librtmp.so.0 flags=4097(O_RDONLY|O_CLOEXEC) mode=0 
+1430591 14:39:53.676550265 1 mesos-tcp-conne (23457) > read fd=3(<f>/usr/lib/x86_64-linux-gnu/librtmp.so.0) size=832 
+1430592 14:39:53.676552045 1 mesos-tcp-conne (23457) < read res=832 data=.ELF..............>......P......@.......`...........@.8...@..................... 
+1430593 14:39:53.676553350 1 mesos-tcp-conne (23457) > fstat fd=3(<f>/usr/lib/x86_64-linux-gnu/librtmp.so.0) 
+1430594 14:39:53.676554532 1 mesos-tcp-conne (23457) < fstat res=0 
+1430595 14:39:53.676556063 1 mesos-tcp-conne (23457) > mmap addr=0 length=2201000 prot=5(PROT_READ|PROT_EXEC) flags=1026(MAP_PRIVATE|MAP_DENYWRITE) fd=3(<f>/usr/lib/x86_64-linux-gnu/librtmp.so.0) offset=0 
+1430596 14:39:53.676559456 1 mesos-tcp-conne (23457) < mmap res=7F09604DE000 vm_size=155180 vm_rss=484 vm_swap=0 
+1430597 14:39:53.676560564 1 mesos-tcp-conne (23457) > mprotect 
+1430598 14:39:53.676565306 1 mesos-tcp-conne (23457) < mprotect 
+1430599 14:39:53.676566386 1 mesos-tcp-conne (23457) > mmap addr=7F09606F6000 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=1030(MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE) fd=3(<f>/usr/lib/x86_64-linux-gnu/librtmp.so.0) offset=98304 
+1430600 14:39:53.676570956 1 mesos-tcp-conne (23457) < mmap res=7F09606F6000 vm_size=155180 vm_rss=500 vm_swap=0 
+1430601 14:39:53.676577534 1 mesos-tcp-conne (23457) > close fd=3(<f>/usr/lib/x86_64-linux-gnu/librtmp.so.0) 
+1430602 14:39:53.676579098 1 mesos-tcp-conne (23457) < close res=0 
+1430603 14:39:53.676584344 1 mesos-tcp-conne (23457) > access mode=0(F_OK) 
+1430604 14:39:53.676586617 1 mesos-tcp-conne (23457) < access res=-2(ENOENT) name=/etc/ld.so.nohwcap 
+1430605 14:39:53.676588413 1 mesos-tcp-conne (23457) > open 
+1430606 14:39:53.676640380 1 mesos-tcp-conne (23457) < open fd=3(<f>/usr/lib/x86_64-linux-gnu/libnss3.so) name=/usr/lib/x86_64-linux-gnu/libnss3.so flags=4097(O_RDONLY|O_CLOEXEC) mode=0 
+1430608 14:39:53.676643551 1 mesos-tcp-conne (23457) > switch next=7 pgft_maj=0 pgft_min=550 vm_size=155180 vm_rss=500 vm_swap=0 
+1440428 14:39:53.800659518 1 mesos-tcp-conne (23457) > read fd=3(<f>/usr/lib/x86_64-linux-gnu/libnss3.so) size=832 
+1440430 14:39:53.800664341 1 mesos-tcp-conne (23457) < read res=832 data=.ELF..............>......f......@...................@.8...@..................... 
+1440431 14:39:53.800667652 1 mesos-tcp-conne (23457) > fstat fd=3(<f>/usr/lib/x86_64-linux-gnu/libnss3.so) 
+1440432 14:39:53.800669660 1 mesos-tcp-conne (23457) < fstat res=0 
+1440433 14:39:53.800673626 1 mesos-tcp-conne (23457) > mmap addr=0 length=4096 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=4294967295 offset=0 
+1440434 14:39:53.800679365 1 mesos-tcp-conne (23457) < mmap res=7F0969DD2000 vm_size=155184 vm_rss=500 vm_swap=0 
+1440435 14:39:53.800685821 1 mesos-tcp-conne (23457) > mmap addr=0 length=3390440 prot=5(PROT_READ|PROT_EXEC) flags=1026(MAP_PRIVATE|MAP_DENYWRITE) fd=3(<f>/usr/lib/x86_64-linux-gnu/libnss3.so) offset=0 
+1440436 14:39:53.800692409 1 mesos-tcp-conne (23457) < mmap res=7F09601A2000 vm_size=158496 vm_rss=500 vm_swap=0 
+1440437 14:39:53.800693514 1 mesos-tcp-conne (23457) > mprotect 
+1440438 14:39:53.800702942 1 mesos-tcp-conne (23457) < mprotect 
+1440439 14:39:53.800704334 1 mesos-tcp-conne (23457) > mmap addr=7F09604D6000 length=28672 prot=3(PROT_READ|PROT_WRITE) flags=1030(MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE) fd=3(<f>/usr/lib/x86_64-linux-gnu/libnss3.so) offset=1261568 
+1440440 14:39:53.800711028 1 mesos-tcp-conne (23457) < mmap res=7F09604D6000 vm_size=158496 vm_rss=520 vm_swap=0 
+1440441 14:39:53.800715170 1 mesos-tcp-conne (23457) > mmap addr=7F09604DD000 length=3048 prot=3(PROT_READ|PROT_WRITE) flags=14(MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS) fd=4294967295 offset=0 
+1440442 14:39:53.800717469 1 mesos-tcp-conne (23457) < mmap res=7F09604DD000 vm_size=158496 vm_rss=524 vm_swap=0 
+1440443 14:39:53.800723257 1 mesos-tcp-conne (23457) > close fd=3(<f>/usr/lib/x86_64-linux-gnu/libnss3.so) 
+1440444 14:39:53.800725125 1 mesos-tcp-conne (23457) < close res=0 
+1440445 14:39:53.800738737 1 mesos-tcp-conne (23457) > access mode=0(F_OK) 
+1440446 14:39:53.800744893 1 mesos-tcp-conne (23457) < access res=-2(ENOENT) name=/etc/ld.so.nohwcap 
+1440447 14:39:53.800748036 1 mesos-tcp-conne (23457) > open 
+1440448 14:39:53.800754756 1 mesos-tcp-conne (23457) < open fd=3(<f>/usr/lib/x86_64-linux-gnu/libssl3.so) name=/usr/lib/x86_64-linux-gnu/libssl3.so flags=4097(O_RDONLY|O_CLOEXEC) mode=0 
+1440449 14:39:53.800756194 1 mesos-tcp-conne (23457) > read fd=3(<f>/usr/lib/x86_64-linux-gnu/libssl3.so) size=832 
+1440450 14:39:53.800758061 1 mesos-tcp-conne (23457) < read res=832 data=.ELF..............>.....@.......@........K..........@.8...@..................... 
+1440452 14:39:53.800759684 1 mesos-tcp-conne (23457) > fstat fd=3(<f>/usr/lib/x86_64-linux-gnu/libssl3.so) 
+1440453 14:39:53.800761393 1 mesos-tcp-conne (23457) < fstat res=0 
+1440454 14:39:53.800763254 1 mesos-tcp-conne (23457) > mmap addr=0 length=2446464 prot=5(PROT_READ|PROT_EXEC) flags=1026(MAP_PRIVATE|MAP_DENYWRITE) fd=3(<f>/usr/lib/x86_64-linux-gnu/libssl3.so) offset=0 
+1440456 14:39:53.800768303 1 mesos-tcp-conne (23457) < mmap res=7F095FF4C000 vm_size=160888 vm_rss=524 vm_swap=0 
+1440457 14:39:53.800769690 1 mesos-tcp-conne (23457) > mprotect 
+1440458 14:39:53.800776941 1 mesos-tcp-conne (23457) < mprotect 
+1440460 14:39:53.800778166 1 mesos-tcp-conne (23457) > mmap addr=7F096019D000 length=16384 prot=3(PROT_READ|PROT_WRITE) flags=1030(MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE) fd=3(<f>/usr/lib/x86_64-linux-gnu/libssl3.so) offset=331776 
+1440461 14:39:53.800781457 1 mesos-tcp-conne (23457) < mmap res=7F096019D000 vm_size=160888 vm_rss=536 vm_swap=0 
+1440463 14:39:53.800785427 1 mesos-tcp-conne (23457) > mmap addr=7F09601A1000 length=1152 prot=3(PROT_READ|PROT_WRITE) flags=14(MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS) fd=4294967295 offset=0 
+1440465 14:39:53.800787446 1 mesos-tcp-conne (23457) < mmap res=7F09601A1000 vm_size=160888 vm_rss=540 vm_swap=0 
+1440467 14:39:53.800792304 1 mesos-tcp-conne (23457) > close fd=3(<f>/usr/lib/x86_64-linux-gnu/libssl3.so) 
+1440468 14:39:53.800794030 1 mesos-tcp-conne (23457) < close res=0 
+1440470 14:39:53.800801740 1 mesos-tcp-conne (23457) > access mode=0(F_OK) 
+1440471 14:39:53.800804647 1 mesos-tcp-conne (23457) < access res=-2(ENOENT) name=/etc/ld.so.nohwcap 
+1440472 14:39:53.800806982 1 mesos-tcp-conne (23457) > open 
+1440473 14:39:53.800810349 1 mesos-tcp-conne (23457) < open fd=3(<f>/usr/lib/x86_64-linux-gnu/libnspr4.so) name=/usr/lib/x86_64-linux-gnu/libnspr4.so flags=4097(O_RDONLY|O_CLOEXEC) mode=0 
+1440474 14:39:53.800811707 1 mesos-tcp-conne (23457) > read fd=3(<f>/usr/lib/x86_64-linux-gnu/libnspr4.so) size=832 
+1440475 14:39:53.800813351 1 mesos-tcp-conne (23457) < read res=832 data=.ELF..............>.....`.......@...................@.8...@..................... 
+1440477 14:39:53.800814769 1 mesos-tcp-conne (23457) > fstat fd=3(<f>/usr/lib/x86_64-linux-gnu/libnspr4.so) 
+1440478 14:39:53.800816052 1 mesos-tcp-conne (23457) < fstat res=0 
+1440479 14:39:53.800817694 1 mesos-tcp-conne (23457) > mmap addr=0 length=2345184 prot=5(PROT_READ|PROT_EXEC) flags=1026(MAP_PRIVATE|MAP_DENYWRITE) fd=3(<f>/usr/lib/x86_64-linux-gnu/libnspr4.so) offset=0 
+1440481 14:39:53.800822308 1 mesos-tcp-conne (23457) < mmap res=7F095FD0F000 vm_size=163180 vm_rss=540 vm_swap=0 
+1440483 14:39:53.800823637 1 mesos-tcp-conne (23457) > mprotect 
+1440486 14:39:53.800829025 1 mesos-tcp-conne (23457) < mprotect 
+1440488 14:39:53.800830228 1 mesos-tcp-conne (23457) > mmap addr=7F095FF47000 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=1030(MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE) fd=3(<f>/usr/lib/x86_64-linux-gnu/libnspr4.so) offset=229376 
+1440491 14:39:53.800834920 1 mesos-tcp-conne (23457) < mmap res=7F095FF47000 vm_size=163180 vm_rss=552 vm_swap=0 
+1440492 14:39:53.800838053 1 mesos-tcp-conne (23457) > mmap addr=7F095FF49000 length=10464 prot=3(PROT_READ|PROT_WRITE) flags=14(MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS) fd=4294967295 offset=0 
+1440493 14:39:53.800839990 1 mesos-tcp-conne (23457) < mmap res=7F095FF49000 vm_size=163180 vm_rss=556 vm_swap=0 
+1440494 14:39:53.800844762 1 mesos-tcp-conne (23457) > close fd=3(<f>/usr/lib/x86_64-linux-gnu/libnspr4.so) 
+1440495 14:39:53.800846360 1 mesos-tcp-conne (23457) < close res=0 
+1440496 14:39:53.800852401 1 mesos-tcp-conne (23457) > access mode=0(F_OK) 
+1440497 14:39:53.800854825 1 mesos-tcp-conne (23457) < access res=-2(ENOENT) name=/etc/ld.so.nohwcap 
+1440498 14:39:53.800856870 1 mesos-tcp-conne (23457) > open 
+1440499 14:39:53.800861641 1 mesos-tcp-conne (23457) < open fd=3(<f>/usr/lib/x86_64-linux-gnu/libgssapi_krb5.so.2) name=/usr/lib/x86_64-linux-gnu/libgssapi_krb5.so.2 flags=4097(O_RDONLY|O_CLOEXEC) mode=0 
+1440500 14:39:53.800863028 1 mesos-tcp-conne (23457) > read fd=3(<f>/usr/lib/x86_64-linux-gnu/libgssapi_krb5.so.2) size=832 
+1440501 14:39:53.800864709 1 mesos-tcp-conne (23457) < read res=832 data=.ELF..............>.............@........g..........@.8...@..................... 
+1440503 14:39:53.800866070 1 mesos-tcp-conne (23457) > fstat fd=3(<f>/usr/lib/x86_64-linux-gnu/libgssapi_krb5.so.2) 
+1440504 14:39:53.800867393 1 mesos-tcp-conne (23457) < fstat res=0 
+1440505 14:39:53.800868922 1 mesos-tcp-conne (23457) > mmap addr=0 length=4096 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=4294967295 offset=0 
+1440507 14:39:53.800871224 1 mesos-tcp-conne (23457) < mmap res=7F0969DD1000 vm_size=163184 vm_rss=556 vm_swap=0 
+1440509 14:39:53.800873944 1 mesos-tcp-conne (23457) > mmap addr=0 length=2386176 prot=5(PROT_READ|PROT_EXEC) flags=1026(MAP_PRIVATE|MAP_DENYWRITE) fd=3(<f>/usr/lib/x86_64-linux-gnu/libgssapi_krb5.so.2) offset=0 
+1440512 14:39:53.800879443 1 mesos-tcp-conne (23457) < mmap res=7F095FAC8000 vm_size=165516 vm_rss=556 vm_swap=0 
+1440514 14:39:53.800880621 1 mesos-tcp-conne (23457) > mprotect 
+1440518 14:39:53.800888469 1 mesos-tcp-conne (23457) < mprotect 
+1440520 14:39:53.800889669 1 mesos-tcp-conne (23457) > mmap addr=7F095FD0C000 length=12288 prot=3(PROT_READ|PROT_WRITE) flags=1030(MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE) fd=3(<f>/usr/lib/x86_64-linux-gnu/libgssapi_krb5.so.2) offset=278528 
+1440522 14:39:53.800892529 1 mesos-tcp-conne (23457) < mmap res=7F095FD0C000 vm_size=165516 vm_rss=572 vm_swap=0 
+1440526 14:39:53.800899551 1 mesos-tcp-conne (23457) > close fd=3(<f>/usr/lib/x86_64-linux-gnu/libgssapi_krb5.so.2) 
+1440528 14:39:53.800901358 1 mesos-tcp-conne (23457) < close res=0 
+1440532 14:39:53.800907589 1 mesos-tcp-conne (23457) > access mode=0(F_OK) 
+1440534 14:39:53.800909997 1 mesos-tcp-conne (23457) < access res=-2(ENOENT) name=/etc/ld.so.nohwcap 
+1440536 14:39:53.800912338 1 mesos-tcp-conne (23457) > open 
+1440539 14:39:53.800916346 1 mesos-tcp-conne (23457) < open fd=3(<f>/usr/lib/x86_64-linux-gnu/liblber-2.4.so.2) name=/usr/lib/x86_64-linux-gnu/liblber-2.4.so.2 flags=4097(O_RDONLY|O_CLOEXEC) mode=0 
+1440541 14:39:53.800917814 1 mesos-tcp-conne (23457) > read fd=3(<f>/usr/lib/x86_64-linux-gnu/liblber-2.4.so.2) size=832 
+1440543 14:39:53.800919862 1 mesos-tcp-conne (23457) < read res=832 data=.ELF..............>......+......@.......x...........@.8...@..................... 
+1440544 14:39:53.800921598 1 mesos-tcp-conne (23457) > fstat fd=3(<f>/usr/lib/x86_64-linux-gnu/liblber-2.4.so.2) 
+1440546 14:39:53.800923140 1 mesos-tcp-conne (23457) < fstat res=0 
+1440548 14:39:53.800925025 1 mesos-tcp-conne (23457) > mmap addr=0 length=2154984 prot=5(PROT_READ|PROT_EXEC) flags=1026(MAP_PRIVATE|MAP_DENYWRITE) fd=3(<f>/usr/lib/x86_64-linux-gnu/liblber-2.4.so.2) offset=0 
+1440550 14:39:53.800929355 1 mesos-tcp-conne (23457) < mmap res=7F095F8B9000 vm_size=167624 vm_rss=572 vm_swap=0 
+1440552 14:39:53.800930742 1 mesos-tcp-conne (23457) > mprotect 
+1440556 14:39:53.800937901 1 mesos-tcp-conne (23457) < mprotect 
+1440558 14:39:53.800939180 1 mesos-tcp-conne (23457) > mmap addr=7F095FAC6000 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=1030(MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE) fd=3(<f>/usr/lib/x86_64-linux-gnu/liblber-2.4.so.2) offset=53248 
+1440561 14:39:53.800942042 1 mesos-tcp-conne (23457) < mmap res=7F095FAC6000 vm_size=167624 vm_rss=588 vm_swap=0 
+1440565 14:39:53.800949430 1 mesos-tcp-conne (23457) > close fd=3(<f>/usr/lib/x86_64-linux-gnu/liblber-2.4.so.2) 
+1440566 14:39:53.800950967 1 mesos-tcp-conne (23457) < close res=0 
+1440567 14:39:53.800956786 1 mesos-tcp-conne (23457) > access mode=0(F_OK) 
+1440568 14:39:53.800959032 1 mesos-tcp-conne (23457) < access res=-2(ENOENT) name=/etc/ld.so.nohwcap 
+1440569 14:39:53.800960573 1 mesos-tcp-conne (23457) > open 
+1440570 14:39:53.800963962 1 mesos-tcp-conne (23457) < open fd=3(<f>/usr/lib/x86_64-linux-gnu/libldap_r-2.4.so.2) name=/usr/lib/x86_64-linux-gnu/libldap_r-2.4.so.2 flags=4097(O_RDONLY|O_CLOEXEC) mode=0 
+1440571 14:39:53.800965278 1 mesos-tcp-conne (23457) > read fd=3(<f>/usr/lib/x86_64-linux-gnu/libldap_r-2.4.so.2) size=832 
+1440572 14:39:53.800966761 1 mesos-tcp-conne (23457) < read res=832 data=.ELF..............>.....0.......@.......0...........@.8...@..................... 
+1440573 14:39:53.800968128 1 mesos-tcp-conne (23457) > fstat fd=3(<f>/usr/lib/x86_64-linux-gnu/libldap_r-2.4.so.2) 
+1440574 14:39:53.800969354 1 mesos-tcp-conne (23457) < fstat res=0 
+1440575 14:39:53.800970989 1 mesos-tcp-conne (23457) > mmap addr=0 length=2427656 prot=5(PROT_READ|PROT_EXEC) flags=1026(MAP_PRIVATE|MAP_DENYWRITE) fd=3(<f>/usr/lib/x86_64-linux-gnu/libldap_r-2.4.so.2) offset=0 
+1440576 14:39:53.800974848 1 mesos-tcp-conne (23457) < mmap res=7F095F668000 vm_size=169996 vm_rss=588 vm_swap=0 
+1440577 14:39:53.800975889 1 mesos-tcp-conne (23457) > mprotect 
+1440578 14:39:53.800981958 1 mesos-tcp-conne (23457) < mprotect 
+1440579 14:39:53.800982962 1 mesos-tcp-conne (23457) > mmap addr=7F095F8B4000 length=12288 prot=3(PROT_READ|PROT_WRITE) flags=1030(MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE) fd=3(<f>/usr/lib/x86_64-linux-gnu/libldap_r-2.4.so.2) offset=311296 
+1440580 14:39:53.800987256 1 mesos-tcp-conne (23457) < mmap res=7F095F8B4000 vm_size=169996 vm_rss=604 vm_swap=0 
+1440581 14:39:53.800990399 1 mesos-tcp-conne (23457) > mmap addr=7F095F8B7000 length=6920 prot=3(PROT_READ|PROT_WRITE) flags=14(MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS) fd=4294967295 offset=0 
+1440582 14:39:53.800992249 1 mesos-tcp-conne (23457) < mmap res=7F095F8B7000 vm_size=169996 vm_rss=608 vm_swap=0 
+1440583 14:39:53.800996812 1 mesos-tcp-conne (23457) > close fd=3(<f>/usr/lib/x86_64-linux-gnu/libldap_r-2.4.so.2) 
+1440584 14:39:53.800998325 1 mesos-tcp-conne (23457) < close res=0 
+1440585 14:39:53.801005335 1 mesos-tcp-conne (23457) > access mode=0(F_OK) 
+1440586 14:39:53.801007686 1 mesos-tcp-conne (23457) < access res=-2(ENOENT) name=/etc/ld.so.nohwcap 
+1440587 14:39:53.801009659 1 mesos-tcp-conne (23457) > open 
+1440588 14:39:53.801013307 1 mesos-tcp-conne (23457) < open fd=3(<f>/lib/x86_64-linux-gnu/libuuid.so.1) name=/lib/x86_64-linux-gnu/libuuid.so.1 flags=4097(O_RDONLY|O_CLOEXEC) mode=0 
+1440589 14:39:53.801014602 1 mesos-tcp-conne (23457) > read fd=3(<f>/lib/x86_64-linux-gnu/libuuid.so.1) size=832 
+1440590 14:39:53.801016145 1 mesos-tcp-conne (23457) < read res=832 data=.ELF..............>.....`.......@........B..........@.8...@..................... 
+1440591 14:39:53.801017442 1 mesos-tcp-conne (23457) > fstat fd=3(<f>/lib/x86_64-linux-gnu/libuuid.so.1) 
+1440592 14:39:53.801018611 1 mesos-tcp-conne (23457) < fstat res=0 
+1440593 14:39:53.801019866 1 mesos-tcp-conne (23457) > mmap addr=0 length=4096 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=4294967295 offset=0 
+1440594 14:39:53.801021735 1 mesos-tcp-conne (23457) < mmap res=7F0969DD0000 vm_size=170000 vm_rss=608 vm_swap=0 
+1440595 14:39:53.801024218 1 mesos-tcp-conne (23457) > mmap addr=0 length=2113968 prot=5(PROT_READ|PROT_EXEC) flags=1026(MAP_PRIVATE|MAP_DENYWRITE) fd=3(<f>/lib/x86_64-linux-gnu/libuuid.so.1) offset=0 
+1440596 14:39:53.801027967 1 mesos-tcp-conne (23457) < mmap res=7F095F463000 vm_size=172068 vm_rss=608 vm_swap=0 
+1440597 14:39:53.801028985 1 mesos-tcp-conne (23457) > mprotect 
+1440598 14:39:53.801034139 1 mesos-tcp-conne (23457) < mprotect 
+1440599 14:39:53.801035150 1 mesos-tcp-conne (23457) > mmap addr=7F095F666000 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=1030(MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE) fd=3(<f>/lib/x86_64-linux-gnu/libuuid.so.1) offset=12288 
+1440600 14:39:53.801039634 1 mesos-tcp-conne (23457) < mmap res=7F095F666000 vm_size=172068 vm_rss=624 vm_swap=0 
+1440601 14:39:53.801045472 1 mesos-tcp-conne (23457) > close fd=3(<f>/lib/x86_64-linux-gnu/libuuid.so.1) 
+1440602 14:39:53.801046924 1 mesos-tcp-conne (23457) < close res=0 
+1440603 14:39:53.801054286 1 mesos-tcp-conne (23457) > access mode=0(F_OK) 
+1440604 14:39:53.801056953 1 mesos-tcp-conne (23457) < access res=-2(ENOENT) name=/etc/ld.so.nohwcap 
+1440605 14:39:53.801058956 1 mesos-tcp-conne (23457) > open 
+1440606 14:39:53.801062463 1 mesos-tcp-conne (23457) < open fd=3(<f>/lib/x86_64-linux-gnu/libcrypt.so.1) name=/lib/x86_64-linux-gnu/libcrypt.so.1 flags=4097(O_RDONLY|O_CLOEXEC) mode=0 
+1440607 14:39:53.801063748 1 mesos-tcp-conne (23457) > read fd=3(<f>/lib/x86_64-linux-gnu/libcrypt.so.1) size=832 
+1440608 14:39:53.801065167 1 mesos-tcp-conne (23457) < read res=832 data=.ELF..............>.............@...................@.8...@.............@....... 
+1440609 14:39:53.801066651 1 mesos-tcp-conne (23457) > fstat fd=3(<f>/lib/x86_64-linux-gnu/libcrypt.so.1) 
+1440610 14:39:53.801067818 1 mesos-tcp-conne (23457) < fstat res=0 
+1440611 14:39:53.801069417 1 mesos-tcp-conne (23457) > mmap addr=0 length=2327072 prot=5(PROT_READ|PROT_EXEC) flags=1026(MAP_PRIVATE|MAP_DENYWRITE) fd=3(<f>/lib/x86_64-linux-gnu/libcrypt.so.1) offset=0 
+1440612 14:39:53.801073694 1 mesos-tcp-conne (23457) < mmap res=7F095F22A000 vm_size=174344 vm_rss=624 vm_swap=0 
+1440613 14:39:53.801074770 1 mesos-tcp-conne (23457) > mprotect 
+1440614 14:39:53.801082672 1 mesos-tcp-conne (23457) < mprotect 
+1440615 14:39:53.801083719 1 mesos-tcp-conne (23457) > mmap addr=7F095F433000 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=1030(MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE) fd=3(<f>/lib/x86_64-linux-gnu/libcrypt.so.1) offset=36864 
+1440616 14:39:53.801087322 1 mesos-tcp-conne (23457) < mmap res=7F095F433000 vm_size=174344 vm_rss=636 vm_swap=0 
+1440617 14:39:53.801090596 1 mesos-tcp-conne (23457) > mmap addr=7F095F435000 length=184864 prot=3(PROT_READ|PROT_WRITE) flags=14(MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS) fd=4294967295 offset=0 
+1440618 14:39:53.801092477 1 mesos-tcp-conne (23457) < mmap res=7F095F435000 vm_size=174344 vm_rss=640 vm_swap=0 
+1440619 14:39:53.801097021 1 mesos-tcp-conne (23457) > close fd=3(<f>/lib/x86_64-linux-gnu/libcrypt.so.1) 
+1440620 14:39:53.801098525 1 mesos-tcp-conne (23457) < close res=0 
+1440621 14:39:53.801106691 1 mesos-tcp-conne (23457) > access mode=0(F_OK) 
+1440622 14:39:53.801109339 1 mesos-tcp-conne (23457) < access res=-2(ENOENT) name=/etc/ld.so.nohwcap 
+1440623 14:39:53.801111236 1 mesos-tcp-conne (23457) > open 
+1440624 14:39:53.801115030 1 mesos-tcp-conne (23457) < open fd=3(<f>/usr/lib/x86_64-linux-gnu/libgnutls.so.26) name=/usr/lib/x86_64-linux-gnu/libgnutls.so.26 flags=4097(O_RDONLY|O_CLOEXEC) mode=0 
+1440625 14:39:53.801116331 1 mesos-tcp-conne (23457) > read fd=3(<f>/usr/lib/x86_64-linux-gnu/libgnutls.so.26) size=832 
+1440626 14:39:53.801117872 1 mesos-tcp-conne (23457) < read res=832 data=.ELF..............>......d......@...................@.8...@..................... 
+1440627 14:39:53.801119177 1 mesos-tcp-conne (23457) > fstat fd=3(<f>/usr/lib/x86_64-linux-gnu/libgnutls.so.26) 
+1440628 14:39:53.801120355 1 mesos-tcp-conne (23457) < fstat res=0 
+1440629 14:39:53.801121667 1 mesos-tcp-conne (23457) > mmap addr=0 length=4096 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=4294967295 offset=0 
+1440630 14:39:53.801123494 1 mesos-tcp-conne (23457) < mmap res=7F0969DCF000 vm_size=174348 vm_rss=640 vm_swap=0 
+1440631 14:39:53.801126193 1 mesos-tcp-conne (23457) > mmap addr=0 length=2872304 prot=5(PROT_READ|PROT_EXEC) flags=1026(MAP_PRIVATE|MAP_DENYWRITE) fd=3(<f>/usr/lib/x86_64-linux-gnu/libgnutls.so.26) offset=0 
+1440632 14:39:53.801130382 1 mesos-tcp-conne (23457) < mmap res=7F095EF6C000 vm_size=177156 vm_rss=640 vm_swap=0 
+1440633 14:39:53.801131406 1 mesos-tcp-conne (23457) > mprotect 
+1440634 14:39:53.801138063 1 mesos-tcp-conne (23457) < mprotect 
+1440635 14:39:53.801139086 1 mesos-tcp-conne (23457) > mmap addr=7F095F222000 length=28672 prot=3(PROT_READ|PROT_WRITE) flags=1030(MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE) fd=3(<f>/usr/lib/x86_64-linux-gnu/libgnutls.so.26) offset=745472 
+1440636 14:39:53.801144776 1 mesos-tcp-conne (23457) < mmap res=7F095F222000 vm_size=177156 vm_rss=652 vm_swap=0 
+1440637 14:39:53.801147887 1 mesos-tcp-conne (23457) > mmap addr=7F095F229000 length=1008 prot=3(PROT_READ|PROT_WRITE) flags=14(MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS) fd=4294967295 offset=0 
+1440638 14:39:53.801149714 1 mesos-tcp-conne (23457) < mmap res=7F095F229000 vm_size=177156 vm_rss=656 vm_swap=0 
+1440639 14:39:53.801154304 1 mesos-tcp-conne (23457) > close fd=3(<f>/usr/lib/x86_64-linux-gnu/libgnutls.so.26) 
+1440640 14:39:53.801155798 1 mesos-tcp-conne (23457) < close res=0 
+1440641 14:39:53.801162016 1 mesos-tcp-conne (23457) > access mode=0(F_OK) 
+1440642 14:39:53.801164506 1 mesos-tcp-conne (23457) < access res=-2(ENOENT) name=/etc/ld.so.nohwcap 
+1440643 14:39:53.801166328 1 mesos-tcp-conne (23457) > open 
+1440644 14:39:53.801170194 1 mesos-tcp-conne (23457) < open fd=3(<f>/lib/x86_64-linux-gnu/libgcrypt.so.11) name=/lib/x86_64-linux-gnu/libgcrypt.so.11 flags=4097(O_RDONLY|O_CLOEXEC) mode=0 
+1440645 14:39:53.801171504 1 mesos-tcp-conne (23457) > read fd=3(<f>/lib/x86_64-linux-gnu/libgcrypt.so.11) size=832 
+1440646 14:39:53.801173040 1 mesos-tcp-conne (23457) < read res=832 data=.ELF..............>.............@...................@.8...@..................... 
+1440647 14:39:53.801174323 1 mesos-tcp-conne (23457) > fstat fd=3(<f>/lib/x86_64-linux-gnu/libgcrypt.so.11) 
+1440648 14:39:53.801175491 1 mesos-tcp-conne (23457) < fstat res=0 
+1440649 14:39:53.801177131 1 mesos-tcp-conne (23457) > mmap addr=0 length=2621056 prot=5(PROT_READ|PROT_EXEC) flags=1026(MAP_PRIVATE|MAP_DENYWRITE) fd=3(<f>/lib/x86_64-linux-gnu/libgcrypt.so.11) offset=0 
+1440650 14:39:53.801181463 1 mesos-tcp-conne (23457) < mmap res=7F095ECEC000 vm_size=179716 vm_rss=656 vm_swap=0 
+1440651 14:39:53.801182510 1 mesos-tcp-conne (23457) > mprotect 
+1440652 14:39:53.801189325 1 mesos-tcp-conne (23457) < mprotect 
+1440653 14:39:53.801190344 1 mesos-tcp-conne (23457) > mmap addr=7F095EF68000 length=16384 prot=3(PROT_READ|PROT_WRITE) flags=1030(MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE) fd=3(<f>/lib/x86_64-linux-gnu/libgcrypt.so.11) offset=507904 
+1440654 14:39:53.801192814 1 mesos-tcp-conne (23457) < mmap res=7F095EF68000 vm_size=179716 vm_rss=668 vm_swap=0 
+1440655 14:39:53.801199871 1 mesos-tcp-conne (23457) > close fd=3(<f>/lib/x86_64-linux-gnu/libgcrypt.so.11) 
+1440656 14:39:53.801201364 1 mesos-tcp-conne (23457) < close res=0 
+1440657 14:39:53.801208102 1 mesos-tcp-conne (23457) > access mode=0(F_OK) 
+1440658 14:39:53.801210714 1 mesos-tcp-conne (23457) < access res=-2(ENOENT) name=/etc/ld.so.nohwcap 
+1440659 14:39:53.801213175 1 mesos-tcp-conne (23457) > open 
+1440660 14:39:53.801216769 1 mesos-tcp-conne (23457) < open fd=3(<f>/usr/lib/x86_64-linux-gnu/libnssutil3.so) name=/usr/lib/x86_64-linux-gnu/libnssutil3.so flags=4097(O_RDONLY|O_CLOEXEC) mode=0 
+1440661 14:39:53.801218068 1 mesos-tcp-conne (23457) > read fd=3(<f>/usr/lib/x86_64-linux-gnu/libnssutil3.so) size=832 
+1440662 14:39:53.801219597 1 mesos-tcp-conne (23457) < read res=832 data=.ELF..............>.............@...................@.8...@..................... 
+1440663 14:39:53.801220880 1 mesos-tcp-conne (23457) > fstat fd=3(<f>/usr/lib/x86_64-linux-gnu/libnssutil3.so) 
+1440664 14:39:53.801222055 1 mesos-tcp-conne (23457) < fstat res=0 
+1440665 14:39:53.801223660 1 mesos-tcp-conne (23457) > mmap addr=0 length=2275480 prot=5(PROT_READ|PROT_EXEC) flags=1026(MAP_PRIVATE|MAP_DENYWRITE) fd=3(<f>/usr/lib/x86_64-linux-gnu/libnssutil3.so) offset=0 
+1440666 14:39:53.801228008 1 mesos-tcp-conne (23457) < mmap res=7F095EAC0000 vm_size=181940 vm_rss=668 vm_swap=0 
+1440667 14:39:53.801229052 1 mesos-tcp-conne (23457) > mprotect 
+1440668 14:39:53.801235909 1 mesos-tcp-conne (23457) < mprotect 
+1440669 14:39:53.801236935 1 mesos-tcp-conne (23457) > mmap addr=7F095ECE5000 length=28672 prot=3(PROT_READ|PROT_WRITE) flags=1030(MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE) fd=3(<f>/usr/lib/x86_64-linux-gnu/libnssutil3.so) offset=151552 
+1440670 14:39:53.801239661 1 mesos-tcp-conne (23457) < mmap res=7F095ECE5000 vm_size=181940 vm_rss=684 vm_swap=0 
+1440671 14:39:53.801246677 1 mesos-tcp-conne (23457) > close fd=3(<f>/usr/lib/x86_64-linux-gnu/libnssutil3.so) 
+1440672 14:39:53.801248142 1 mesos-tcp-conne (23457) < close res=0 
+1440673 14:39:53.801254126 1 mesos-tcp-conne (23457) > access mode=0(F_OK) 
+1440674 14:39:53.801256601 1 mesos-tcp-conne (23457) < access res=-2(ENOENT) name=/etc/ld.so.nohwcap 
+1440675 14:39:53.801258442 1 mesos-tcp-conne (23457) > open 
+1440676 14:39:53.801261340 1 mesos-tcp-conne (23457) < open fd=3(<f>/usr/lib/x86_64-linux-gnu/libplc4.so) name=/usr/lib/x86_64-linux-gnu/libplc4.so flags=4097(O_RDONLY|O_CLOEXEC) mode=0 
+1440677 14:39:53.801262643 1 mesos-tcp-conne (23457) > read fd=3(<f>/usr/lib/x86_64-linux-gnu/libplc4.so) size=832 
+1440678 14:39:53.801264093 1 mesos-tcp-conne (23457) < read res=832 data=.ELF..............>.............@.......PB..........@.8...@..................... 
+1440679 14:39:53.801265391 1 mesos-tcp-conne (23457) > fstat fd=3(<f>/usr/lib/x86_64-linux-gnu/libplc4.so) 
+1440680 14:39:53.801266593 1 mesos-tcp-conne (23457) < fstat res=0 
+1440681 14:39:53.801267906 1 mesos-tcp-conne (23457) > mmap addr=0 length=4096 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=4294967295 offset=0 
+1440682 14:39:53.801269711 1 mesos-tcp-conne (23457) < mmap res=7F0969DCE000 vm_size=181944 vm_rss=684 vm_swap=0 
+1440683 14:39:53.801272115 1 mesos-tcp-conne (23457) > mmap addr=0 length=2113904 prot=5(PROT_READ|PROT_EXEC) flags=1026(MAP_PRIVATE|MAP_DENYWRITE) fd=3(<f>/usr/lib/x86_64-linux-gnu/libplc4.so) offset=0 
+1440684 14:39:53.801276164 1 mesos-tcp-conne (23457) < mmap res=7F095E8BB000 vm_size=184012 vm_rss=684 vm_swap=0 
+1440685 14:39:53.801277186 1 mesos-tcp-conne (23457) > mprotect 
+1440686 14:39:53.801282659 1 mesos-tcp-conne (23457) < mprotect 
+1440687 14:39:53.801283683 1 mesos-tcp-conne (23457) > mmap addr=7F095EABE000 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=1030(MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE) fd=3(<f>/usr/lib/x86_64-linux-gnu/libplc4.so) offset=12288 
+1440688 14:39:53.801287650 1 mesos-tcp-conne (23457) < mmap res=7F095EABE000 vm_size=184012 vm_rss=704 vm_swap=0 
+1440689 14:39:53.801293696 1 mesos-tcp-conne (23457) > close fd=3(<f>/usr/lib/x86_64-linux-gnu/libplc4.so) 
+1440690 14:39:53.801295187 1 mesos-tcp-conne (23457) < close res=0 
+1440691 14:39:53.801300600 1 mesos-tcp-conne (23457) > access mode=0(F_OK) 
+1440692 14:39:53.801303048 1 mesos-tcp-conne (23457) < access res=-2(ENOENT) name=/etc/ld.so.nohwcap 
+1440693 14:39:53.801304774 1 mesos-tcp-conne (23457) > open 
+1440694 14:39:53.801308348 1 mesos-tcp-conne (23457) < open fd=3(<f>/usr/lib/x86_64-linux-gnu/libplds4.so) name=/usr/lib/x86_64-linux-gnu/libplds4.so flags=4097(O_RDONLY|O_CLOEXEC) mode=0 
+1440695 14:39:53.801309636 1 mesos-tcp-conne (23457) > read fd=3(<f>/usr/lib/x86_64-linux-gnu/libplds4.so) size=832 
+1440696 14:39:53.801311047 1 mesos-tcp-conne (23457) < read res=832 data=.ELF..............>.....@.......@........2..........@.8...@..................... 
+1440697 14:39:53.801312366 1 mesos-tcp-conne (23457) > fstat fd=3(<f>/usr/lib/x86_64-linux-gnu/libplds4.so) 
+1440698 14:39:53.801313548 1 mesos-tcp-conne (23457) < fstat res=0 
+1440699 14:39:53.801315154 1 mesos-tcp-conne (23457) > mmap addr=0 length=2109768 prot=5(PROT_READ|PROT_EXEC) flags=1026(MAP_PRIVATE|MAP_DENYWRITE) fd=3(<f>/usr/lib/x86_64-linux-gnu/libplds4.so) offset=0 
+1440700 14:39:53.801319459 1 mesos-tcp-conne (23457) < mmap res=7F095E6B7000 vm_size=186076 vm_rss=704 vm_swap=0 
+1440701 14:39:53.801320499 1 mesos-tcp-conne (23457) > mprotect 
+1440702 14:39:53.801325494 1 mesos-tcp-conne (23457) < mprotect 
+1440703 14:39:53.801326514 1 mesos-tcp-conne (23457) > mmap addr=7F095E8B9000 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=1030(MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE) fd=3(<f>/usr/lib/x86_64-linux-gnu/libplds4.so) offset=8192 
+1440704 14:39:53.801330845 1 mesos-tcp-conne (23457) < mmap res=7F095E8B9000 vm_size=186076 vm_rss=716 vm_swap=0 
+1440705 14:39:53.801337123 1 mesos-tcp-conne (23457) > close fd=3(<f>/usr/lib/x86_64-linux-gnu/libplds4.so) 
+1440706 14:39:53.801338663 1 mesos-tcp-conne (23457) < close res=0 
+1440707 14:39:53.801348394 1 mesos-tcp-conne (23457) > access mode=0(F_OK) 
+1440708 14:39:53.801351915 1 mesos-tcp-conne (23457) < access res=-2(ENOENT) name=/etc/ld.so.nohwcap 
+1440709 14:39:53.801353697 1 mesos-tcp-conne (23457) > open 
+1440710 14:39:53.801357453 1 mesos-tcp-conne (23457) < open fd=3(<f>/usr/lib/x86_64-linux-gnu/libkrb5.so.3) name=/usr/lib/x86_64-linux-gnu/libkrb5.so.3 flags=4097(O_RDONLY|O_CLOEXEC) mode=0 
+1440711 14:39:53.801358773 1 mesos-tcp-conne (23457) > read fd=3(<f>/usr/lib/x86_64-linux-gnu/libkrb5.so.3) size=832 
+1440712 14:39:53.801360308 1 mesos-tcp-conne (23457) < read res=832 data=.ELF..............>.....p.......@...................@.8...@..................... 
+1440713 14:39:53.801361558 1 mesos-tcp-conne (23457) > fstat fd=3(<f>/usr/lib/x86_64-linux-gnu/libkrb5.so.3) 
+1440714 14:39:53.801362735 1 mesos-tcp-conne (23457) < fstat res=0 
+1440715 14:39:53.801364382 1 mesos-tcp-conne (23457) > mmap addr=0 length=2927488 prot=5(PROT_READ|PROT_EXEC) flags=1026(MAP_PRIVATE|MAP_DENYWRITE) fd=3(<f>/usr/lib/x86_64-linux-gnu/libkrb5.so.3) offset=0 
+1440716 14:39:53.801368433 1 mesos-tcp-conne (23457) < mmap res=7F095E3EC000 vm_size=188936 vm_rss=716 vm_swap=0 
+1440717 14:39:53.801369472 1 mesos-tcp-conne (23457) > mprotect 
+1440718 14:39:53.801375831 1 mesos-tcp-conne (23457) < mprotect 
+1440719 14:39:53.801376853 1 mesos-tcp-conne (23457) > mmap addr=7F095E6A8000 length=61440 prot=3(PROT_READ|PROT_WRITE) flags=1030(MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE) fd=3(<f>/usr/lib/x86_64-linux-gnu/libkrb5.so.3) offset=770048 
+1440720 14:39:53.801379262 1 mesos-tcp-conne (23457) < mmap res=7F095E6A8000 vm_size=188936 vm_rss=728 vm_swap=0 
+1440721 14:39:53.801394995 1 mesos-tcp-conne (23457) > close fd=3(<f>/usr/lib/x86_64-linux-gnu/libkrb5.so.3) 
+1440722 14:39:53.801396515 1 mesos-tcp-conne (23457) < close res=0 
+1440723 14:39:53.801403056 1 mesos-tcp-conne (23457) > access mode=0(F_OK) 
+1440724 14:39:53.801405421 1 mesos-tcp-conne (23457) < access res=-2(ENOENT) name=/etc/ld.so.nohwcap 
+1440725 14:39:53.801406981 1 mesos-tcp-conne (23457) > open 
+1440726 14:39:53.801410436 1 mesos-tcp-conne (23457) < open fd=3(<f>/usr/lib/x86_64-linux-gnu/libk5crypto.so.3) name=/usr/lib/x86_64-linux-gnu/libk5crypto.so.3 flags=4097(O_RDONLY|O_CLOEXEC) mode=0 
+1440727 14:39:53.801411716 1 mesos-tcp-conne (23457) > read fd=3(<f>/usr/lib/x86_64-linux-gnu/libk5crypto.so.3) size=832 
+1440728 14:39:53.801413123 1 mesos-tcp-conne (23457) < read res=832 data=.ELF..............>..... @......@...................@.8...@..................... 
+1440729 14:39:53.801414320 1 mesos-tcp-conne (23457) > mmap addr=0 length=4096 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=4294967295 offset=0 
+1440730 14:39:53.801416003 1 mesos-tcp-conne (23457) < mmap res=7F0969DCD000 vm_size=188940 vm_rss=728 vm_swap=0 
+1440731 14:39:53.801418052 1 mesos-tcp-conne (23457) > fstat fd=3(<f>/usr/lib/x86_64-linux-gnu/libk5crypto.so.3) 
+1440732 14:39:53.801419248 1 mesos-tcp-conne (23457) < fstat res=0 
+1440733 14:39:53.801420806 1 mesos-tcp-conne (23457) > mmap addr=0 length=2285720 prot=5(PROT_READ|PROT_EXEC) flags=1026(MAP_PRIVATE|MAP_DENYWRITE) fd=3(<f>/usr/lib/x86_64-linux-gnu/libk5crypto.so.3) offset=0 
+1440734 14:39:53.801424326 1 mesos-tcp-conne (23457) < mmap res=7F095E1BD000 vm_size=191176 vm_rss=728 vm_swap=0 
+1440735 14:39:53.801425332 1 mesos-tcp-conne (23457) > mprotect 
+1440736 14:39:53.801431463 1 mesos-tcp-conne (23457) < mprotect 
+1440737 14:39:53.801432447 1 mesos-tcp-conne (23457) > mmap addr=7F095E3E8000 length=12288 prot=3(PROT_READ|PROT_WRITE) flags=1030(MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE) fd=3(<f>/usr/lib/x86_64-linux-gnu/libk5crypto.so.3) offset=176128 
+1440738 14:39:53.801436770 1 mesos-tcp-conne (23457) < mmap res=7F095E3E8000 vm_size=191176 vm_rss=748 vm_swap=0 
+1440739 14:39:53.801440225 1 mesos-tcp-conne (23457) > mmap addr=7F095E3EB000 length=152 prot=3(PROT_READ|PROT_WRITE) flags=14(MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS) fd=4294967295 offset=0 
+1440740 14:39:53.801441983 1 mesos-tcp-conne (23457) < mmap res=7F095E3EB000 vm_size=191176 vm_rss=752 vm_swap=0 
+1440741 14:39:53.801446473 1 mesos-tcp-conne (23457) > close fd=3(<f>/usr/lib/x86_64-linux-gnu/libk5crypto.so.3) 
+1440742 14:39:53.801447956 1 mesos-tcp-conne (23457) < close res=0 
+1440743 14:39:53.801454130 1 mesos-tcp-conne (23457) > access mode=0(F_OK) 
+1440744 14:39:53.801456619 1 mesos-tcp-conne (23457) < access res=-2(ENOENT) name=/etc/ld.so.nohwcap 
+1440745 14:39:53.801458295 1 mesos-tcp-conne (23457) > open 
+1440746 14:39:53.801461609 1 mesos-tcp-conne (23457) < open fd=3(<f>/lib/x86_64-linux-gnu/libcom_err.so.2) name=/lib/x86_64-linux-gnu/libcom_err.so.2 flags=4097(O_RDONLY|O_CLOEXEC) mode=0 
+1440747 14:39:53.801462835 1 mesos-tcp-conne (23457) > read fd=3(<f>/lib/x86_64-linux-gnu/libcom_err.so.2) size=832 
+1440748 14:39:53.801464361 1 mesos-tcp-conne (23457) < read res=832 data=.ELF..............>.............@.......@2..........@.8...@..................... 
+1440749 14:39:53.801465658 1 mesos-tcp-conne (23457) > fstat fd=3(<f>/lib/x86_64-linux-gnu/libcom_err.so.2) 
+1440750 14:39:53.801466828 1 mesos-tcp-conne (23457) < fstat res=0 
+1440751 14:39:53.801468439 1 mesos-tcp-conne (23457) > mmap addr=0 length=2109896 prot=5(PROT_READ|PROT_EXEC) flags=1026(MAP_PRIVATE|MAP_DENYWRITE) fd=3(<f>/lib/x86_64-linux-gnu/libcom_err.so.2) offset=0 
+1440752 14:39:53.801472688 1 mesos-tcp-conne (23457) < mmap res=7F095DFB9000 vm_size=193240 vm_rss=752 vm_swap=0 
+1440753 14:39:53.801473696 1 mesos-tcp-conne (23457) > mprotect 
+1440754 14:39:53.801479833 1 mesos-tcp-conne (23457) < mprotect 
+1440755 14:39:53.801480824 1 mesos-tcp-conne (23457) > mmap addr=7F095E1BB000 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=1030(MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE) fd=3(<f>/lib/x86_64-linux-gnu/libcom_err.so.2) offset=8192 
+1440756 14:39:53.801484725 1 mesos-tcp-conne (23457) < mmap res=7F095E1BB000 vm_size=193240 vm_rss=764 vm_swap=0 
+1440757 14:39:53.801490727 1 mesos-tcp-conne (23457) > close fd=3(<f>/lib/x86_64-linux-gnu/libcom_err.so.2) 
+1440758 14:39:53.801492208 1 mesos-tcp-conne (23457) < close res=0 
+1440759 14:39:53.801497703 1 mesos-tcp-conne (23457) > access mode=0(F_OK) 
+1440760 14:39:53.801500121 1 mesos-tcp-conne (23457) < access res=-2(ENOENT) name=/etc/ld.so.nohwcap 
+1440761 14:39:53.801501664 1 mesos-tcp-conne (23457) > open 
+1440762 14:39:53.801504754 1 mesos-tcp-conne (23457) < open fd=3(<f>/usr/lib/x86_64-linux-gnu/libkrb5support.so.0) name=/usr/lib/x86_64-linux-gnu/libkrb5support.so.0 flags=4097(O_RDONLY|O_CLOEXEC) mode=0 
+1440763 14:39:53.801506005 1 mesos-tcp-conne (23457) > read fd=3(<f>/usr/lib/x86_64-linux-gnu/libkrb5support.so.0) size=832 
+1440764 14:39:53.801507402 1 mesos-tcp-conne (23457) < read res=832 data=.ELF..............>.....@(......@...................@.8...@..................... 
+1440765 14:39:53.801508624 1 mesos-tcp-conne (23457) > fstat fd=3(<f>/usr/lib/x86_64-linux-gnu/libkrb5support.so.0) 
+1440766 14:39:53.801509880 1 mesos-tcp-conne (23457) < fstat res=0 
+1440767 14:39:53.801511490 1 mesos-tcp-conne (23457) > mmap addr=0 length=2139112 prot=5(PROT_READ|PROT_EXEC) flags=1026(MAP_PRIVATE|MAP_DENYWRITE) fd=3(<f>/usr/lib/x86_64-linux-gnu/libkrb5support.so.0) offset=0 
+1440768 14:39:53.801515504 1 mesos-tcp-conne (23457) < mmap res=7F095DDAE000 vm_size=195332 vm_rss=764 vm_swap=0 
+1440769 14:39:53.801516517 1 mesos-tcp-conne (23457) > mprotect 
+1440770 14:39:53.801522726 1 mesos-tcp-conne (23457) < mprotect 
+1440771 14:39:53.801523721 1 mesos-tcp-conne (23457) > mmap addr=7F095DFB7000 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=1030(MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE) fd=3(<f>/usr/lib/x86_64-linux-gnu/libkrb5support.so.0) offset=36864 
+1440772 14:39:53.801527732 1 mesos-tcp-conne (23457) < mmap res=7F095DFB7000 vm_size=195332 vm_rss=776 vm_swap=0 
+1440773 14:39:53.801534003 1 mesos-tcp-conne (23457) > close fd=3(<f>/usr/lib/x86_64-linux-gnu/libkrb5support.so.0) 
+1440774 14:39:53.801535473 1 mesos-tcp-conne (23457) < close res=0 
+1440775 14:39:53.801542728 1 mesos-tcp-conne (23457) > access mode=0(F_OK) 
+1440776 14:39:53.801545467 1 mesos-tcp-conne (23457) < access res=-2(ENOENT) name=/etc/ld.so.nohwcap 
+1440777 14:39:53.801547132 1 mesos-tcp-conne (23457) > open 
+1440778 14:39:53.801550469 1 mesos-tcp-conne (23457) < open fd=3(<f>/lib/x86_64-linux-gnu/libresolv.so.2) name=/lib/x86_64-linux-gnu/libresolv.so.2 flags=4097(O_RDONLY|O_CLOEXEC) mode=0 
+1440779 14:39:53.801551713 1 mesos-tcp-conne (23457) > read fd=3(<f>/lib/x86_64-linux-gnu/libresolv.so.2) size=832 
+1440780 14:39:53.801553391 1 mesos-tcp-conne (23457) < read res=832 data=.ELF..............>......:......@...................@.8...@.............@....... 
+1440781 14:39:53.801554719 1 mesos-tcp-conne (23457) > fstat fd=3(<f>/lib/x86_64-linux-gnu/libresolv.so.2) 
+1440782 14:39:53.801555873 1 mesos-tcp-conne (23457) < fstat res=0 
+1440783 14:39:53.801557235 1 mesos-tcp-conne (23457) > mmap addr=0 length=4096 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=4294967295 offset=0 
+1440784 14:39:53.801559154 1 mesos-tcp-conne (23457) < mmap res=7F0969DCC000 vm_size=195336 vm_rss=776 vm_swap=0 
+1440785 14:39:53.801561488 1 mesos-tcp-conne (23457) > mmap addr=0 length=2206376 prot=5(PROT_READ|PROT_EXEC) flags=1026(MAP_PRIVATE|MAP_DENYWRITE) fd=3(<f>/lib/x86_64-linux-gnu/libresolv.so.2) offset=0 
+1440786 14:39:53.801565910 1 mesos-tcp-conne (23457) < mmap res=7F095DB93000 vm_size=197492 vm_rss=776 vm_swap=0 
+1440787 14:39:53.801566908 1 mesos-tcp-conne (23457) > mprotect 
+1440788 14:39:53.801574810 1 mesos-tcp-conne (23457) < mprotect 
+1440789 14:39:53.801575820 1 mesos-tcp-conne (23457) > mmap addr=7F095DDAA000 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=1030(MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE) fd=3(<f>/lib/x86_64-linux-gnu/libresolv.so.2) offset=94208 
+1440790 14:39:53.801578811 1 mesos-tcp-conne (23457) < mmap res=7F095DDAA000 vm_size=197492 vm_rss=796 vm_swap=0 
+1440791 14:39:53.801581865 1 mesos-tcp-conne (23457) > mmap addr=7F095DDAC000 length=6824 prot=3(PROT_READ|PROT_WRITE) flags=14(MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS) fd=4294967295 offset=0 
+1440792 14:39:53.801583541 1 mesos-tcp-conne (23457) < mmap res=7F095DDAC000 vm_size=197492 vm_rss=800 vm_swap=0 
+1440793 14:39:53.801588242 1 mesos-tcp-conne (23457) > close fd=3(<f>/lib/x86_64-linux-gnu/libresolv.so.2) 
+1440794 14:39:53.801589678 1 mesos-tcp-conne (23457) < close res=0 
+1440795 14:39:53.801596224 1 mesos-tcp-conne (23457) > access mode=0(F_OK) 
+1440796 14:39:53.801598529 1 mesos-tcp-conne (23457) < access res=-2(ENOENT) name=/etc/ld.so.nohwcap 
+1440797 14:39:53.801600185 1 mesos-tcp-conne (23457) > open 
+1440798 14:39:53.801603500 1 mesos-tcp-conne (23457) < open fd=3(<f>/usr/lib/x86_64-linux-gnu/libgssapi.so.3) name=/usr/lib/x86_64-linux-gnu/libgssapi.so.3 flags=4097(O_RDONLY|O_CLOEXEC) mode=0 
+1440799 14:39:53.801604740 1 mesos-tcp-conne (23457) > read fd=3(<f>/usr/lib/x86_64-linux-gnu/libgssapi.so.3) size=832 
+1440800 14:39:53.801606330 1 mesos-tcp-conne (23457) < read res=832 data=.ELF..............>.............@...................@.8...@..................... 
+1440801 14:39:53.801607562 1 mesos-tcp-conne (23457) > fstat fd=3(<f>/usr/lib/x86_64-linux-gnu/libgssapi.so.3) 
+1440802 14:39:53.801608735 1 mesos-tcp-conne (23457) < fstat res=0 
+1440803 14:39:53.801610326 1 mesos-tcp-conne (23457) > mmap addr=0 length=2347352 prot=5(PROT_READ|PROT_EXEC) flags=1026(MAP_PRIVATE|MAP_DENYWRITE) fd=3(<f>/usr/lib/x86_64-linux-gnu/libgssapi.so.3) offset=0 
+1440804 14:39:53.801614265 1 mesos-tcp-conne (23457) < mmap res=7F095D955000 vm_size=199788 vm_rss=800 vm_swap=0 
+1440805 14:39:53.801615291 1 mesos-tcp-conne (23457) > mprotect 
+1440806 14:39:53.801622565 1 mesos-tcp-conne (23457) < mprotect 
+1440807 14:39:53.801623570 1 mesos-tcp-conne (23457) > mmap addr=7F095DB8F000 length=12288 prot=3(PROT_READ|PROT_WRITE) flags=1030(MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE) fd=3(<f>/usr/lib/x86_64-linux-gnu/libgssapi.so.3) offset=237568 
+1440808 14:39:53.801626270 1 mesos-tcp-conne (23457) < mmap res=7F095DB8F000 vm_size=199788 vm_rss=812 vm_swap=0 
+1440809 14:39:53.801629523 1 mesos-tcp-conne (23457) > mmap addr=7F095DB92000 length=344 prot=3(PROT_READ|PROT_WRITE) flags=14(MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS) fd=4294967295 offset=0 
+1440810 14:39:53.801631244 1 mesos-tcp-conne (23457) < mmap res=7F095DB92000 vm_size=199788 vm_rss=816 vm_swap=0 
+1440811 14:39:53.801635867 1 mesos-tcp-conne (23457) > close fd=3(<f>/usr/lib/x86_64-linux-gnu/libgssapi.so.3) 
+1440812 14:39:53.801637307 1 mesos-tcp-conne (23457) < close res=0 
+1440813 14:39:53.801646367 1 mesos-tcp-conne (23457) > access mode=0(F_OK) 
+1440814 14:39:53.801648975 1 mesos-tcp-conne (23457) < access res=-2(ENOENT) name=/etc/ld.so.nohwcap 
+1440815 14:39:53.801650726 1 mesos-tcp-conne (23457) > open 
+1440816 14:39:53.801653854 1 mesos-tcp-conne (23457) < open fd=3(<f>/usr/lib/x86_64-linux-gnu/libtasn1.so.6) name=/usr/lib/x86_64-linux-gnu/libtasn1.so.6 flags=4097(O_RDONLY|O_CLOEXEC) mode=0 
+1440817 14:39:53.801655222 1 mesos-tcp-conne (23457) > read fd=3(<f>/usr/lib/x86_64-linux-gnu/libtasn1.so.6) size=832 
+1440818 14:39:53.801656785 1 mesos-tcp-conne (23457) < read res=832 data=.ELF..............>......)......@........2..........@.8...@..................... 
+1440819 14:39:53.801657986 1 mesos-tcp-conne (23457) > fstat fd=3(<f>/usr/lib/x86_64-linux-gnu/libtasn1.so.6) 
+1440820 14:39:53.801659156 1 mesos-tcp-conne (23457) < fstat res=0 
+1440821 14:39:53.801660791 1 mesos-tcp-conne (23457) > mmap addr=0 length=2176040 prot=5(PROT_READ|PROT_EXEC) flags=1026(MAP_PRIVATE|MAP_DENYWRITE) fd=3(<f>/usr/lib/x86_64-linux-gnu/libtasn1.so.6) offset=0 
+1440822 14:39:53.801664806 1 mesos-tcp-conne (23457) < mmap res=7F095D741000 vm_size=201916 vm_rss=816 vm_swap=0 
+1440823 14:39:53.801665847 1 mesos-tcp-conne (23457) > mprotect 
+1440824 14:39:53.801672670 1 mesos-tcp-conne (23457) < mprotect 
+1440825 14:39:53.801673659 1 mesos-tcp-conne (23457) > mmap addr=7F095D953000 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=1030(MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE) fd=3(<f>/usr/lib/x86_64-linux-gnu/libtasn1.so.6) offset=73728 
+1440826 14:39:53.801675926 1 mesos-tcp-conne (23457) < mmap res=7F095D953000 vm_size=201916 vm_rss=828 vm_swap=0 
+1440827 14:39:53.801682562 1 mesos-tcp-conne (23457) > close fd=3(<f>/usr/lib/x86_64-linux-gnu/libtasn1.so.6) 
+1440828 14:39:53.801684045 1 mesos-tcp-conne (23457) < close res=0 
+1440829 14:39:53.801689868 1 mesos-tcp-conne (23457) > access mode=0(F_OK) 
+1440830 14:39:53.801692102 1 mesos-tcp-conne (23457) < access res=-2(ENOENT) name=/etc/ld.so.nohwcap 
+1440831 14:39:53.801704933 1 mesos-tcp-conne (23457) > open 
+1440832 14:39:53.801709124 1 mesos-tcp-conne (23457) < open fd=3(<f>/usr/lib/x86_64-linux-gnu/libp11-kit.so.0) name=/usr/lib/x86_64-linux-gnu/libp11-kit.so.0 flags=4097(O_RDONLY|O_CLOEXEC) mode=0 
+1440833 14:39:53.801710450 1 mesos-tcp-conne (23457) > read fd=3(<f>/usr/lib/x86_64-linux-gnu/libp11-kit.so.0) size=832 
+1440834 14:39:53.801712291 1 mesos-tcp-conne (23457) < read res=832 data=.ELF..............>.....P.......@...................@.8...@..................... 
+1440835 14:39:53.801713712 1 mesos-tcp-conne (23457) > fstat fd=3(<f>/usr/lib/x86_64-linux-gnu/libp11-kit.so.0) 
+1440836 14:39:53.801715191 1 mesos-tcp-conne (23457) < fstat res=0 
+1440837 14:39:53.801717025 1 mesos-tcp-conne (23457) > mmap addr=0 length=4096 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=4294967295 offset=0 
+1440838 14:39:53.801719366 1 mesos-tcp-conne (23457) < mmap res=7F0969DCB000 vm_size=201920 vm_rss=828 vm_swap=0 
+1440839 14:39:53.801722468 1 mesos-tcp-conne (23457) > mmap addr=0 length=2364496 prot=5(PROT_READ|PROT_EXEC) flags=1026(MAP_PRIVATE|MAP_DENYWRITE) fd=3(<f>/usr/lib/x86_64-linux-gnu/libp11-kit.so.0) offset=0 
+1440840 14:39:53.801726856 1 mesos-tcp-conne (23457) < mmap res=7F095D4FF000 vm_size=204232 vm_rss=828 vm_swap=0 
+1440841 14:39:53.801727886 1 mesos-tcp-conne (23457) > mprotect 
+1440842 14:39:53.801734777 1 mesos-tcp-conne (23457) < mprotect 
+1440843 14:39:53.801735787 1 mesos-tcp-conne (23457) > mmap addr=7F095D739000 length=32768 prot=3(PROT_READ|PROT_WRITE) flags=1030(MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE) fd=3(<f>/usr/lib/x86_64-linux-gnu/libp11-kit.so.0) offset=237568 
+1440844 14:39:53.801740323 1 mesos-tcp-conne (23457) < mmap res=7F095D739000 vm_size=204232 vm_rss=844 vm_swap=0 
+1440845 14:39:53.801747664 1 mesos-tcp-conne (23457) > close fd=3(<f>/usr/lib/x86_64-linux-gnu/libp11-kit.so.0) 
+1440846 14:39:53.801749297 1 mesos-tcp-conne (23457) < close res=0 
+1440847 14:39:53.801757351 1 mesos-tcp-conne (23457) > access mode=0(F_OK) 
+1440848 14:39:53.801759840 1 mesos-tcp-conne (23457) < access res=-2(ENOENT) name=/etc/ld.so.nohwcap 
+1440849 14:39:53.801761494 1 mesos-tcp-conne (23457) > open 
+1440850 14:39:53.801765269 1 mesos-tcp-conne (23457) < open fd=3(<f>/lib/x86_64-linux-gnu/libgpg-error.so.0) name=/lib/x86_64-linux-gnu/libgpg-error.so.0 flags=4097(O_RDONLY|O_CLOEXEC) mode=0 
+1440851 14:39:53.801766507 1 mesos-tcp-conne (23457) > read fd=3(<f>/lib/x86_64-linux-gnu/libgpg-error.so.0) size=832 
+1440852 14:39:53.801768069 1 mesos-tcp-conne (23457) < read res=832 data=.ELF..............>.............@.......pA..........@.8...@..................... 
+1440853 14:39:53.801769304 1 mesos-tcp-conne (23457) > fstat fd=3(<f>/lib/x86_64-linux-gnu/libgpg-error.so.0) 
+1440854 14:39:53.801770439 1 mesos-tcp-conne (23457) < fstat res=0 
+1440855 14:39:53.801772224 1 mesos-tcp-conne (23457) > mmap addr=0 length=2113648 prot=5(PROT_READ|PROT_EXEC) flags=1026(MAP_PRIVATE|MAP_DENYWRITE) fd=3(<f>/lib/x86_64-linux-gnu/libgpg-error.so.0) offset=0 
+1440856 14:39:53.801776036 1 mesos-tcp-conne (23457) < mmap res=7F095D2FA000 vm_size=206300 vm_rss=844 vm_swap=0 
+1440857 14:39:53.801777057 1 mesos-tcp-conne (23457) > mprotect 
+1440858 14:39:53.801781826 1 mesos-tcp-conne (23457) < mprotect 
+1440859 14:39:53.801782812 1 mesos-tcp-conne (23457) > mmap addr=7F095D4FD000 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=1030(MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE) fd=3(<f>/lib/x86_64-linux-gnu/libgpg-error.so.0) offset=12288 
+1440860 14:39:53.801787058 1 mesos-tcp-conne (23457) < mmap res=7F095D4FD000 vm_size=206300 vm_rss=860 vm_swap=0 
+1440861 14:39:53.801796457 1 mesos-tcp-conne (23457) > close fd=3(<f>/lib/x86_64-linux-gnu/libgpg-error.so.0) 
+1440862 14:39:53.801797935 1 mesos-tcp-conne (23457) < close res=0 
+1440863 14:39:53.801809012 1 mesos-tcp-conne (23457) > access mode=0(F_OK) 
+1440864 14:39:53.801811327 1 mesos-tcp-conne (23457) < access res=-2(ENOENT) name=/etc/ld.so.nohwcap 
+1440865 14:39:53.801812935 1 mesos-tcp-conne (23457) > open 
+1440866 14:39:53.801815980 1 mesos-tcp-conne (23457) < open fd=3(<f>/lib/x86_64-linux-gnu/libkeyutils.so.1) name=/lib/x86_64-linux-gnu/libkeyutils.so.1 flags=4097(O_RDONLY|O_CLOEXEC) mode=0 
+1440867 14:39:53.801817230 1 mesos-tcp-conne (23457) > read fd=3(<f>/lib/x86_64-linux-gnu/libkeyutils.so.1) size=832 
+1440868 14:39:53.801818734 1 mesos-tcp-conne (23457) < read res=832 data=.ELF..............>..... .......@.......01..........@.8...@..................... 
+1440869 14:39:53.801819974 1 mesos-tcp-conne (23457) > fstat fd=3(<f>/lib/x86_64-linux-gnu/libkeyutils.so.1) 
+1440870 14:39:53.801821122 1 mesos-tcp-conne (23457) < fstat res=0 
+1440871 14:39:53.801822541 1 mesos-tcp-conne (23457) > mmap addr=0 length=4096 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=4294967295 offset=0 
+1440872 14:39:53.801824277 1 mesos-tcp-conne (23457) < mmap res=7F0969DCA000 vm_size=206304 vm_rss=860 vm_swap=0 
+1440873 14:39:53.801826876 1 mesos-tcp-conne (23457) > mmap addr=0 length=2109456 prot=5(PROT_READ|PROT_EXEC) flags=1026(MAP_PRIVATE|MAP_DENYWRITE) fd=3(<f>/lib/x86_64-linux-gnu/libkeyutils.so.1) offset=0 
+1440874 14:39:53.801830477 1 mesos-tcp-conne (23457) < mmap res=7F095D0F6000 vm_size=208368 vm_rss=860 vm_swap=0 
+1440875 14:39:53.801831533 1 mesos-tcp-conne (23457) > mprotect 
+1440876 14:39:53.801838101 1 mesos-tcp-conne (23457) < mprotect 
+1440877 14:39:53.801839117 1 mesos-tcp-conne (23457) > mmap addr=7F095D2F8000 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=1030(MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE) fd=3(<f>/lib/x86_64-linux-gnu/libkeyutils.so.1) offset=8192 
+1440878 14:39:53.801841606 1 mesos-tcp-conne (23457) < mmap res=7F095D2F8000 vm_size=208368 vm_rss=876 vm_swap=0 
+1440879 14:39:53.801848211 1 mesos-tcp-conne (23457) > close fd=3(<f>/lib/x86_64-linux-gnu/libkeyutils.so.1) 
+1440880 14:39:53.801849736 1 mesos-tcp-conne (23457) < close res=0 
+1440881 14:39:53.801858744 1 mesos-tcp-conne (23457) > access mode=0(F_OK) 
+1440882 14:39:53.801861085 1 mesos-tcp-conne (23457) < access res=-2(ENOENT) name=/etc/ld.so.nohwcap 
+1440883 14:39:53.801862973 1 mesos-tcp-conne (23457) > open 
+1440884 14:39:53.801866334 1 mesos-tcp-conne (23457) < open fd=3(<f>/usr/lib/x86_64-linux-gnu/libheimntlm.so.0) name=/usr/lib/x86_64-linux-gnu/libheimntlm.so.0 flags=4097(O_RDONLY|O_CLOEXEC) mode=0 
+1440885 14:39:53.801867571 1 mesos-tcp-conne (23457) > read fd=3(<f>/usr/lib/x86_64-linux-gnu/libheimntlm.so.0) size=832 
+1440886 14:39:53.801869063 1 mesos-tcp-conne (23457) < read res=832 data=.ELF..............>......*......@...................@.8...@..................... 
+1440887 14:39:53.801870302 1 mesos-tcp-conne (23457) > fstat fd=3(<f>/usr/lib/x86_64-linux-gnu/libheimntlm.so.0) 
+1440888 14:39:53.801871464 1 mesos-tcp-conne (23457) < fstat res=0 
+1440889 14:39:53.801873158 1 mesos-tcp-conne (23457) > mmap addr=0 length=2130960 prot=5(PROT_READ|PROT_EXEC) flags=1026(MAP_PRIVATE|MAP_DENYWRITE) fd=3(<f>/usr/lib/x86_64-linux-gnu/libheimntlm.so.0) offset=0 
+1440890 14:39:53.801877284 1 mesos-tcp-conne (23457) < mmap res=7F095CEED000 vm_size=210452 vm_rss=876 vm_swap=0 
+1440891 14:39:53.801878309 1 mesos-tcp-conne (23457) > mprotect 
+1440892 14:39:53.801882803 1 mesos-tcp-conne (23457) < mprotect 
+1440893 14:39:53.801883785 1 mesos-tcp-conne (23457) > mmap addr=7F095D0F4000 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=1030(MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE) fd=3(<f>/usr/lib/x86_64-linux-gnu/libheimntlm.so.0) offset=28672 
+1440894 14:39:53.801888212 1 mesos-tcp-conne (23457) < mmap res=7F095D0F4000 vm_size=210452 vm_rss=888 vm_swap=0 
+1440895 14:39:53.801894643 1 mesos-tcp-conne (23457) > close fd=3(<f>/usr/lib/x86_64-linux-gnu/libheimntlm.so.0) 
+1440896 14:39:53.801896088 1 mesos-tcp-conne (23457) < close res=0 
+1440897 14:39:53.801902909 1 mesos-tcp-conne (23457) > access mode=0(F_OK) 
+1440898 14:39:53.801905498 1 mesos-tcp-conne (23457) < access res=-2(ENOENT) name=/etc/ld.so.nohwcap 
+1440899 14:39:53.801907035 1 mesos-tcp-conne (23457) > open 
+1440900 14:39:53.801910394 1 mesos-tcp-conne (23457) < open fd=3(<f>/usr/lib/x86_64-linux-gnu/libkrb5.so.26) name=/usr/lib/x86_64-linux-gnu/libkrb5.so.26 flags=4097(O_RDONLY|O_CLOEXEC) mode=0 
+1440901 14:39:53.801911640 1 mesos-tcp-conne (23457) > read fd=3(<f>/usr/lib/x86_64-linux-gnu/libkrb5.so.26) size=832 
+1440902 14:39:53.801913173 1 mesos-tcp-conne (23457) < read res=832 data=.ELF..............>.....0.......@........g..........@.8...@..................... 
+1440903 14:39:53.801914449 1 mesos-tcp-conne (23457) > fstat fd=3(<f>/usr/lib/x86_64-linux-gnu/libkrb5.so.26) 
+1440904 14:39:53.801915613 1 mesos-tcp-conne (23457) < fstat res=0 
+1440905 14:39:53.801917134 1 mesos-tcp-conne (23457) > mmap addr=0 length=4096 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=4294967295 offset=0 
+1440906 14:39:53.801918867 1 mesos-tcp-conne (23457) < mmap res=7F0969DC9000 vm_size=210456 vm_rss=888 vm_swap=0 
+1440907 14:39:53.801921332 1 mesos-tcp-conne (23457) > mmap addr=0 length=2650544 prot=5(PROT_READ|PROT_EXEC) flags=1026(MAP_PRIVATE|MAP_DENYWRITE) fd=3(<f>/usr/lib/x86_64-linux-gnu/libkrb5.so.26) offset=0 
+1440908 14:39:53.801925347 1 mesos-tcp-conne (23457) < mmap res=7F095CC65000 vm_size=213048 vm_rss=888 vm_swap=0 
+1440909 14:39:53.801926341 1 mesos-tcp-conne (23457) > mprotect 
+1440910 14:39:53.801932895 1 mesos-tcp-conne (23457) < mprotect 
+1440911 14:39:53.801933925 1 mesos-tcp-conne (23457) > mmap addr=7F095CEE6000 length=24576 prot=3(PROT_READ|PROT_WRITE) flags=1030(MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE) fd=3(<f>/usr/lib/x86_64-linux-gnu/libkrb5.so.26) offset=528384 
+1440912 14:39:53.801938136 1 mesos-tcp-conne (23457) < mmap res=7F095CEE6000 vm_size=213048 vm_rss=908 vm_swap=0 
+1440913 14:39:53.801941337 1 mesos-tcp-conne (23457) > mmap addr=7F095CEEC000 length=432 prot=3(PROT_READ|PROT_WRITE) flags=14(MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS) fd=4294967295 offset=0 
+1440914 14:39:53.801943059 1 mesos-tcp-conne (23457) < mmap res=7F095CEEC000 vm_size=213048 vm_rss=912 vm_swap=0 
+1440915 14:39:53.801947552 1 mesos-tcp-conne (23457) > close fd=3(<f>/usr/lib/x86_64-linux-gnu/libkrb5.so.26) 
+1440916 14:39:53.801949007 1 mesos-tcp-conne (23457) < close res=0 
+1440917 14:39:53.801956409 1 mesos-tcp-conne (23457) > access mode=0(F_OK) 
+1440918 14:39:53.801958745 1 mesos-tcp-conne (23457) < access res=-2(ENOENT) name=/etc/ld.so.nohwcap 
+1440919 14:39:53.801960310 1 mesos-tcp-conne (23457) > open 
+1440920 14:39:53.801963962 1 mesos-tcp-conne (23457) < open fd=3(<f>/usr/lib/x86_64-linux-gnu/libasn1.so.8) name=/usr/lib/x86_64-linux-gnu/libasn1.so.8 flags=4097(O_RDONLY|O_CLOEXEC) mode=0 
+1440921 14:39:53.801965192 1 mesos-tcp-conne (23457) > read fd=3(<f>/usr/lib/x86_64-linux-gnu/libasn1.so.8) size=832 
+1440922 14:39:53.801966735 1 mesos-tcp-conne (23457) < read res=832 data=.ELF..............>.....@.......@.......0...........@.8...@..................... 
+1440923 14:39:53.801968014 1 mesos-tcp-conne (23457) > fstat fd=3(<f>/usr/lib/x86_64-linux-gnu/libasn1.so.8) 
+1440924 14:39:53.801969175 1 mesos-tcp-conne (23457) < fstat res=0 
+1440925 14:39:53.801970978 1 mesos-tcp-conne (23457) > mmap addr=0 length=2752816 prot=5(PROT_READ|PROT_EXEC) flags=1026(MAP_PRIVATE|MAP_DENYWRITE) fd=3(<f>/usr/lib/x86_64-linux-gnu/libasn1.so.8) offset=0 
+1440926 14:39:53.801975463 1 mesos-tcp-conne (23457) < mmap res=7F095C9C4000 vm_size=215740 vm_rss=912 vm_swap=0 
+1440927 14:39:53.801976499 1 mesos-tcp-conne (23457) > mprotect 
+1440928 14:39:53.801983248 1 mesos-tcp-conne (23457) < mprotect 
+1440929 14:39:53.801984246 1 mesos-tcp-conne (23457) > mmap addr=7F095CC61000 length=16384 prot=3(PROT_READ|PROT_WRITE) flags=1030(MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE) fd=3(<f>/usr/lib/x86_64-linux-gnu/libasn1.so.8) offset=643072 
+1440930 14:39:53.801986726 1 mesos-tcp-conne (23457) < mmap res=7F095CC61000 vm_size=215740 vm_rss=924 vm_swap=0 
+1440931 14:39:53.801993378 1 mesos-tcp-conne (23457) > close fd=3(<f>/usr/lib/x86_64-linux-gnu/libasn1.so.8) 
+1440932 14:39:53.801994831 1 mesos-tcp-conne (23457) < close res=0 
+1440933 14:39:53.802002196 1 mesos-tcp-conne (23457) > access mode=0(F_OK) 
+1440934 14:39:53.802004500 1 mesos-tcp-conne (23457) < access res=-2(ENOENT) name=/etc/ld.so.nohwcap 
+1440935 14:39:53.802006124 1 mesos-tcp-conne (23457) > open 
+1440936 14:39:53.802010078 1 mesos-tcp-conne (23457) < open fd=3(<f>/usr/lib/x86_64-linux-gnu/libhcrypto.so.4) name=/usr/lib/x86_64-linux-gnu/libhcrypto.so.4 flags=4097(O_RDONLY|O_CLOEXEC) mode=0 
+1440937 14:39:53.802011317 1 mesos-tcp-conne (23457) > read fd=3(<f>/usr/lib/x86_64-linux-gnu/libhcrypto.so.4) size=832 
+1440938 14:39:53.802012844 1 mesos-tcp-conne (23457) < read res=832 data=.ELF..............>......g......@.......H...........@.8...@..................... 
+1440939 14:39:53.802014111 1 mesos-tcp-conne (23457) > fstat fd=3(<f>/usr/lib/x86_64-linux-gnu/libhcrypto.so.4) 
+1440940 14:39:53.802015271 1 mesos-tcp-conne (23457) < fstat res=0 
+1440941 14:39:53.802017041 1 mesos-tcp-conne (23457) > mmap addr=0 length=2303048 prot=5(PROT_READ|PROT_EXEC) flags=1026(MAP_PRIVATE|MAP_DENYWRITE) fd=3(<f>/usr/lib/x86_64-linux-gnu/libhcrypto.so.4) offset=0 
+1440942 14:39:53.802021405 1 mesos-tcp-conne (23457) < mmap res=7F095C791000 vm_size=217992 vm_rss=924 vm_swap=0 
+1440943 14:39:53.802022420 1 mesos-tcp-conne (23457) > mprotect 
+1440944 14:39:53.802029076 1 mesos-tcp-conne (23457) < mprotect 
+1440945 14:39:53.802030068 1 mesos-tcp-conne (23457) > mmap addr=7F095C9C1000 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=1030(MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE) fd=3(<f>/usr/lib/x86_64-linux-gnu/libhcrypto.so.4) offset=196608 
+1440946 14:39:53.802033193 1 mesos-tcp-conne (23457) < mmap res=7F095C9C1000 vm_size=217992 vm_rss=940 vm_swap=0 
+1440947 14:39:53.802036476 1 mesos-tcp-conne (23457) > mmap addr=7F095C9C3000 length=1096 prot=3(PROT_READ|PROT_WRITE) flags=14(MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS) fd=4294967295 offset=0 
+1440948 14:39:53.802038098 1 mesos-tcp-conne (23457) < mmap res=7F095C9C3000 vm_size=217992 vm_rss=944 vm_swap=0 
+1440949 14:39:53.802042551 1 mesos-tcp-conne (23457) > close fd=3(<f>/usr/lib/x86_64-linux-gnu/libhcrypto.so.4) 
+1440950 14:39:53.802044018 1 mesos-tcp-conne (23457) < close res=0 
+1440951 14:39:53.802050733 1 mesos-tcp-conne (23457) > access mode=0(F_OK) 
+1440952 14:39:53.802053096 1 mesos-tcp-conne (23457) < access res=-2(ENOENT) name=/etc/ld.so.nohwcap 
+1440953 14:39:53.802054689 1 mesos-tcp-conne (23457) > open 
+1440954 14:39:53.802057975 1 mesos-tcp-conne (23457) < open fd=3(<f>/usr/lib/x86_64-linux-gnu/libroken.so.18) name=/usr/lib/x86_64-linux-gnu/libroken.so.18 flags=4097(O_RDONLY|O_CLOEXEC) mode=0 
+1440955 14:39:53.802059208 1 mesos-tcp-conne (23457) > read fd=3(<f>/usr/lib/x86_64-linux-gnu/libroken.so.18) size=832 
+1440956 14:39:53.802060701 1 mesos-tcp-conne (23457) < read res=832 data=.ELF..............>.....pL......@........G..........@.8...@..................... 
+1440957 14:39:53.802061986 1 mesos-tcp-conne (23457) > fstat fd=3(<f>/usr/lib/x86_64-linux-gnu/libroken.so.18) 
+1440958 14:39:53.802063146 1 mesos-tcp-conne (23457) < fstat res=0 
+1440959 14:39:53.802064801 1 mesos-tcp-conne (23457) > mmap addr=0 length=2181216 prot=5(PROT_READ|PROT_EXEC) flags=1026(MAP_PRIVATE|MAP_DENYWRITE) fd=3(<f>/usr/lib/x86_64-linux-gnu/libroken.so.18) offset=0 
+1440960 14:39:53.802068841 1 mesos-tcp-conne (23457) < mmap res=7F095C57C000 vm_size=220124 vm_rss=944 vm_swap=0 
+1440961 14:39:53.802069895 1 mesos-tcp-conne (23457) > mprotect 
+1440962 14:39:53.802075349 1 mesos-tcp-conne (23457) < mprotect 
+1440963 14:39:53.802076339 1 mesos-tcp-conne (23457) > mmap addr=7F095C78F000 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=1030(MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE) fd=3(<f>/usr/lib/x86_64-linux-gnu/libroken.so.18) offset=77824 
+1440964 14:39:53.802079898 1 mesos-tcp-conne (23457) < mmap res=7F095C78F000 vm_size=220124 vm_rss=956 vm_swap=0 
+1440965 14:39:53.802086388 1 mesos-tcp-conne (23457) > close fd=3(<f>/usr/lib/x86_64-linux-gnu/libroken.so.18) 
+1440966 14:39:53.802087881 1 mesos-tcp-conne (23457) < close res=0 
+1440967 14:39:53.802095270 1 mesos-tcp-conne (23457) > access mode=0(F_OK) 
+1440968 14:39:53.802097580 1 mesos-tcp-conne (23457) < access res=-2(ENOENT) name=/etc/ld.so.nohwcap 
+1440969 14:39:53.802099260 1 mesos-tcp-conne (23457) > open 
+1440970 14:39:53.802102800 1 mesos-tcp-conne (23457) < open fd=3(<f>/usr/lib/x86_64-linux-gnu/libffi.so.6) name=/usr/lib/x86_64-linux-gnu/libffi.so.6 flags=4097(O_RDONLY|O_CLOEXEC) mode=0 
+1440971 14:39:53.802104035 1 mesos-tcp-conne (23457) > read fd=3(<f>/usr/lib/x86_64-linux-gnu/libffi.so.6) size=832 
+1440972 14:39:53.802105419 1 mesos-tcp-conne (23457) < read res=832 data=.ELF..............>.....P.......@....... r..........@.8...@..................... 
+1440973 14:39:53.802106647 1 mesos-tcp-conne (23457) > fstat fd=3(<f>/usr/lib/x86_64-linux-gnu/libffi.so.6) 
+1440974 14:39:53.802107825 1 mesos-tcp-conne (23457) < fstat res=0 
+1440975 14:39:53.802109226 1 mesos-tcp-conne (23457) > mmap addr=0 length=4096 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=4294967295 offset=0 
+1440976 14:39:53.802110975 1 mesos-tcp-conne (23457) < mmap res=7F0969DC8000 vm_size=220128 vm_rss=956 vm_swap=0 
+1440977 14:39:53.802113548 1 mesos-tcp-conne (23457) > mmap addr=0 length=2127304 prot=5(PROT_READ|PROT_EXEC) flags=1026(MAP_PRIVATE|MAP_DENYWRITE) fd=3(<f>/usr/lib/x86_64-linux-gnu/libffi.so.6) offset=0 
+1440978 14:39:53.802118024 1 mesos-tcp-conne (23457) < mmap res=7F095C374000 vm_size=222208 vm_rss=956 vm_swap=0 
+1440979 14:39:53.802119007 1 mesos-tcp-conne (23457) > mprotect 
+1440980 14:39:53.802124877 1 mesos-tcp-conne (23457) < mprotect 
+1440981 14:39:53.802125861 1 mesos-tcp-conne (23457) > mmap addr=7F095C57A000 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=1030(MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE) fd=3(<f>/usr/lib/x86_64-linux-gnu/libffi.so.6) offset=24576 
+1440982 14:39:53.802129936 1 mesos-tcp-conne (23457) < mmap res=7F095C57A000 vm_size=222208 vm_rss=976 vm_swap=0 
+1440983 14:39:53.802136387 1 mesos-tcp-conne (23457) > close fd=3(<f>/usr/lib/x86_64-linux-gnu/libffi.so.6) 
+1440984 14:39:53.802137835 1 mesos-tcp-conne (23457) < close res=0 
+1440985 14:39:53.802148633 1 mesos-tcp-conne (23457) > access mode=0(F_OK) 
+1440986 14:39:53.802151379 1 mesos-tcp-conne (23457) < access res=-2(ENOENT) name=/etc/ld.so.nohwcap 
+1440987 14:39:53.802153121 1 mesos-tcp-conne (23457) > open 
+1440988 14:39:53.802156607 1 mesos-tcp-conne (23457) < open fd=3(<f>/usr/lib/x86_64-linux-gnu/libwind.so.0) name=/usr/lib/x86_64-linux-gnu/libwind.so.0 flags=4097(O_RDONLY|O_CLOEXEC) mode=0 
+1440989 14:39:53.802157812 1 mesos-tcp-conne (23457) > read fd=3(<f>/usr/lib/x86_64-linux-gnu/libwind.so.0) size=832 
+1440990 14:39:53.802159181 1 mesos-tcp-conne (23457) < read res=832 data=.ELF..............>.....p.......@...................@.8...@..................... 
+1440991 14:39:53.802160415 1 mesos-tcp-conne (23457) > fstat fd=3(<f>/usr/lib/x86_64-linux-gnu/libwind.so.0) 
+1440992 14:39:53.802161574 1 mesos-tcp-conne (23457) < fstat res=0 
+1440993 14:39:53.802163336 1 mesos-tcp-conne (23457) > mmap addr=0 length=2261152 prot=5(PROT_READ|PROT_EXEC) flags=1026(MAP_PRIVATE|MAP_DENYWRITE) fd=3(<f>/usr/lib/x86_64-linux-gnu/libwind.so.0) offset=0 
+1440994 14:39:53.802167623 1 mesos-tcp-conne (23457) < mmap res=7F095C14B000 vm_size=224420 vm_rss=976 vm_swap=0 
+1440995 14:39:53.802168685 1 mesos-tcp-conne (23457) > mprotect 
+1440996 14:39:53.802175515 1 mesos-tcp-conne (23457) < mprotect 
+1440997 14:39:53.802176522 1 mesos-tcp-conne (23457) > mmap addr=7F095C372000 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=1030(MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE) fd=3(<f>/usr/lib/x86_64-linux-gnu/libwind.so.0) offset=159744 
+1440998 14:39:53.802179065 1 mesos-tcp-conne (23457) < mmap res=7F095C372000 vm_size=224420 vm_rss=988 vm_swap=0 
+1440999 14:39:53.802185498 1 mesos-tcp-conne (23457) > close fd=3(<f>/usr/lib/x86_64-linux-gnu/libwind.so.0) 
+1441000 14:39:53.802186981 1 mesos-tcp-conne (23457) < close res=0 
+1441001 14:39:53.802193694 1 mesos-tcp-conne (23457) > access mode=0(F_OK) 
+1441002 14:39:53.802196026 1 mesos-tcp-conne (23457) < access res=-2(ENOENT) name=/etc/ld.so.nohwcap 
+1441003 14:39:53.802197541 1 mesos-tcp-conne (23457) > open 
+1441004 14:39:53.802200878 1 mesos-tcp-conne (23457) < open fd=3(<f>/usr/lib/x86_64-linux-gnu/libheimbase.so.1) name=/usr/lib/x86_64-linux-gnu/libheimbase.so.1 flags=4097(O_RDONLY|O_CLOEXEC) mode=0 
+1441005 14:39:53.802202118 1 mesos-tcp-conne (23457) > read fd=3(<f>/usr/lib/x86_64-linux-gnu/libheimbase.so.1) size=832 
+1441006 14:39:53.802203509 1 mesos-tcp-conne (23457) < read res=832 data=.ELF..............>......)......@...................@.8...@..................... 
+1441007 14:39:53.802204726 1 mesos-tcp-conne (23457) > fstat fd=3(<f>/usr/lib/x86_64-linux-gnu/libheimbase.so.1) 
+1441008 14:39:53.802205886 1 mesos-tcp-conne (23457) < fstat res=0 
+1441009 14:39:53.802207637 1 mesos-tcp-conne (23457) > mmap addr=0 length=2153112 prot=5(PROT_READ|PROT_EXEC) flags=1026(MAP_PRIVATE|MAP_DENYWRITE) fd=3(<f>/usr/lib/x86_64-linux-gnu/libheimbase.so.1) offset=0 
+1441010 14:39:53.802211781 1 mesos-tcp-conne (23457) < mmap res=7F095BF3D000 vm_size=226524 vm_rss=988 vm_swap=0 
+1441011 14:39:53.802212805 1 mesos-tcp-conne (23457) > mprotect 
+1441012 14:39:53.802218419 1 mesos-tcp-conne (23457) < mprotect 
+1441013 14:39:53.802219394 1 mesos-tcp-conne (23457) > mmap addr=7F095C149000 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=1030(MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE) fd=3(<f>/usr/lib/x86_64-linux-gnu/libheimbase.so.1) offset=49152 
+1441014 14:39:53.802223309 1 mesos-tcp-conne (23457) < mmap res=7F095C149000 vm_size=226524 vm_rss=1000 vm_swap=0 
+1441015 14:39:53.802229737 1 mesos-tcp-conne (23457) > close fd=3(<f>/usr/lib/x86_64-linux-gnu/libheimbase.so.1) 
+1441016 14:39:53.802231248 1 mesos-tcp-conne (23457) < close res=0 
+1441017 14:39:53.802238303 1 mesos-tcp-conne (23457) > access mode=0(F_OK) 
+1441018 14:39:53.802240952 1 mesos-tcp-conne (23457) < access res=-2(ENOENT) name=/etc/ld.so.nohwcap 
+1441019 14:39:53.802242520 1 mesos-tcp-conne (23457) > open 
+1441020 14:39:53.802245898 1 mesos-tcp-conne (23457) < open fd=3(<f>/usr/lib/x86_64-linux-gnu/libhx509.so.5) name=/usr/lib/x86_64-linux-gnu/libhx509.so.5 flags=4097(O_RDONLY|O_CLOEXEC) mode=0 
+1441021 14:39:53.802247139 1 mesos-tcp-conne (23457) > read fd=3(<f>/usr/lib/x86_64-linux-gnu/libhx509.so.5) size=832 
+1441022 14:39:53.802248662 1 mesos-tcp-conne (23457) < read res=832 data=.ELF..............>.............@........|..........@.8...@..................... 
+1441023 14:39:53.802249927 1 mesos-tcp-conne (23457) > fstat fd=3(<f>/usr/lib/x86_64-linux-gnu/libhx509.so.5) 
+1441024 14:39:53.802251066 1 mesos-tcp-conne (23457) < fstat res=0 
+1441025 14:39:53.802252534 1 mesos-tcp-conne (23457) > mmap addr=0 length=4096 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=4294967295 offset=0 
+1441026 14:39:53.802254324 1 mesos-tcp-conne (23457) < mmap res=7F0969DC7000 vm_size=226528 vm_rss=1000 vm_swap=0 
+1441027 14:39:53.802256878 1 mesos-tcp-conne (23457) > mmap addr=0 length=2392104 prot=5(PROT_READ|PROT_EXEC) flags=1026(MAP_PRIVATE|MAP_DENYWRITE) fd=3(<f>/usr/lib/x86_64-linux-gnu/libhx509.so.5) offset=0 
+1441028 14:39:53.802260566 1 mesos-tcp-conne (23457) < mmap res=7F095BCF4000 vm_size=228868 vm_rss=1000 vm_swap=0 
+1441029 14:39:53.802261559 1 mesos-tcp-conne (23457) > mprotect 
+1441030 14:39:53.802267512 1 mesos-tcp-conne (23457) < mprotect 
+1441031 14:39:53.802268538 1 mesos-tcp-conne (23457) > mmap addr=7F095BF38000 length=16384 prot=3(PROT_READ|PROT_WRITE) flags=1030(MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE) fd=3(<f>/usr/lib/x86_64-linux-gnu/libhx509.so.5) offset=278528 
+1441032 14:39:53.802273077 1 mesos-tcp-conne (23457) < mmap res=7F095BF38000 vm_size=228868 vm_rss=1020 vm_swap=0 
+1441033 14:39:53.802276282 1 mesos-tcp-conne (23457) > mmap addr=7F095BF3C000 length=40 prot=3(PROT_READ|PROT_WRITE) flags=14(MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS) fd=4294967295 offset=0 
+1441034 14:39:53.802278083 1 mesos-tcp-conne (23457) < mmap res=7F095BF3C000 vm_size=228868 vm_rss=1024 vm_swap=0 
+1441035 14:39:53.802282765 1 mesos-tcp-conne (23457) > close fd=3(<f>/usr/lib/x86_64-linux-gnu/libhx509.so.5) 
+1441036 14:39:53.802284218 1 mesos-tcp-conne (23457) < close res=0 
+1441037 14:39:53.802335007 1 mesos-tcp-conne (23457) > mmap addr=0 length=4096 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=4294967295 offset=0 
+1441038 14:39:53.802336835 1 mesos-tcp-conne (23457) < mmap res=7F0969DC6000 vm_size=228872 vm_rss=1024 vm_swap=0 
+1441039 14:39:53.802352177 1 mesos-tcp-conne (23457) > mmap addr=0 length=4096 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=4294967295 offset=0 
+1441040 14:39:53.802353342 1 mesos-tcp-conne (23457) < mmap res=7F0969DC5000 vm_size=228876 vm_rss=1024 vm_swap=0 
+1441041 14:39:53.802370128 1 mesos-tcp-conne (23457) > mmap addr=0 length=4096 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=4294967295 offset=0 
+1441042 14:39:53.802371249 1 mesos-tcp-conne (23457) < mmap res=7F0969DC4000 vm_size=228880 vm_rss=1024 vm_swap=0 
+1441043 14:39:53.802388466 1 mesos-tcp-conne (23457) > mmap addr=0 length=4096 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=4294967295 offset=0 
+1441044 14:39:53.802389619 1 mesos-tcp-conne (23457) < mmap res=7F0969DC3000 vm_size=228884 vm_rss=1024 vm_swap=0 
+1441045 14:39:53.802411365 1 mesos-tcp-conne (23457) > mmap addr=0 length=4096 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=4294967295 offset=0 
+1441046 14:39:53.802412553 1 mesos-tcp-conne (23457) < mmap res=7F0969DC2000 vm_size=228888 vm_rss=1024 vm_swap=0 
+1441047 14:39:53.802419539 1 mesos-tcp-conne (23457) > mmap addr=0 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=4294967295 offset=0 
+1441048 14:39:53.802420704 1 mesos-tcp-conne (23457) < mmap res=7F0969DC0000 vm_size=228896 vm_rss=1024 vm_swap=0 
+1441049 14:39:53.802426837 1 mesos-tcp-conne (23457) > arch_prctl 
+1441050 14:39:53.802428272 1 mesos-tcp-conne (23457) < arch_prctl 
+1441051 14:39:53.802557700 1 mesos-tcp-conne (23457) > mprotect 
+1441052 14:39:53.802566717 1 mesos-tcp-conne (23457) < mprotect 
+1441053 14:39:53.802588154 1 mesos-tcp-conne (23457) > mprotect 
+1441054 14:39:53.802594991 1 mesos-tcp-conne (23457) < mprotect 
+1441055 14:39:53.802607252 1 mesos-tcp-conne (23457) > mprotect 
+1441056 14:39:53.802613902 1 mesos-tcp-conne (23457) < mprotect 
+1441057 14:39:53.802624724 1 mesos-tcp-conne (23457) > mprotect 
+1441058 14:39:53.802630052 1 mesos-tcp-conne (23457) < mprotect 
+1441059 14:39:53.802641456 1 mesos-tcp-conne (23457) > mprotect 
+1441060 14:39:53.802645813 1 mesos-tcp-conne (23457) < mprotect 
+1441061 14:39:53.802652563 1 mesos-tcp-conne (23457) > mprotect 
+1441062 14:39:53.802657600 1 mesos-tcp-conne (23457) < mprotect 
+1441063 14:39:53.802668896 1 mesos-tcp-conne (23457) > mprotect 
+1441064 14:39:53.802673509 1 mesos-tcp-conne (23457) < mprotect 
+1441065 14:39:53.802697486 1 mesos-tcp-conne (23457) > mprotect 
+1441066 14:39:53.802702536 1 mesos-tcp-conne (23457) < mprotect 
+1441067 14:39:53.802712919 1 mesos-tcp-conne (23457) > mprotect 
+1441068 14:39:53.802717625 1 mesos-tcp-conne (23457) < mprotect 
+1441069 14:39:53.802724184 1 mesos-tcp-conne (23457) > mprotect 
+1441070 14:39:53.802728916 1 mesos-tcp-conne (23457) < mprotect 
+1441071 14:39:53.802737361 1 mesos-tcp-conne (23457) > mprotect 
+1441072 14:39:53.802742492 1 mesos-tcp-conne (23457) < mprotect 
+1441073 14:39:53.802909999 1 mesos-tcp-conne (23457) > mprotect 
+1441074 14:39:53.802924392 1 mesos-tcp-conne (23457) < mprotect 
+1441075 14:39:53.802934011 1 mesos-tcp-conne (23457) > mprotect 
+1441077 14:39:53.802939185 1 mesos-tcp-conne (23457) < mprotect 
+1441082 14:39:53.802995115 1 mesos-tcp-conne (23457) > mprotect 
+1441083 14:39:53.803000702 1 mesos-tcp-conne (23457) < mprotect 
+1441098 14:39:53.803082245 1 mesos-tcp-conne (23457) > mprotect 
+1441101 14:39:53.803087624 1 mesos-tcp-conne (23457) < mprotect 
+1441106 14:39:53.803096421 1 mesos-tcp-conne (23457) > mprotect 
+1441110 14:39:53.803101435 1 mesos-tcp-conne (23457) < mprotect 
+1441116 14:39:53.803112042 1 mesos-tcp-conne (23457) > mprotect 
+1441120 14:39:53.803117350 1 mesos-tcp-conne (23457) < mprotect 
+1441124 14:39:53.803123374 1 mesos-tcp-conne (23457) > mprotect 
+1441128 14:39:53.803128781 1 mesos-tcp-conne (23457) < mprotect 
+1441147 14:39:53.803166240 1 mesos-tcp-conne (23457) > mprotect 
+1441148 14:39:53.803171603 1 mesos-tcp-conne (23457) < mprotect 
+1441151 14:39:53.803179356 1 mesos-tcp-conne (23457) > mprotect 
+1441154 14:39:53.803183710 1 mesos-tcp-conne (23457) < mprotect 
+1441159 14:39:53.803255277 1 mesos-tcp-conne (23457) > mprotect 
+1441160 14:39:53.803260765 1 mesos-tcp-conne (23457) < mprotect 
+1441163 14:39:53.803275888 1 mesos-tcp-conne (23457) > mprotect 
+1441165 14:39:53.803281208 1 mesos-tcp-conne (23457) < mprotect 
+1441168 14:39:53.803299552 1 mesos-tcp-conne (23457) > mprotect 
+1441169 14:39:53.803304100 1 mesos-tcp-conne (23457) < mprotect 
+1441170 14:39:53.803341050 1 mesos-tcp-conne (23457) > mprotect 
+1441171 14:39:53.803366880 1 mesos-tcp-conne (23457) < mprotect 
+1441172 14:39:53.803385288 1 mesos-tcp-conne (23457) > mprotect 
+1441173 14:39:53.803396735 1 mesos-tcp-conne (23457) < mprotect 
+1441174 14:39:53.803422353 1 mesos-tcp-conne (23457) > mprotect 
+1441175 14:39:53.803429914 1 mesos-tcp-conne (23457) < mprotect 
+1441176 14:39:53.803438128 1 mesos-tcp-conne (23457) > mprotect 
+1441177 14:39:53.803444770 1 mesos-tcp-conne (23457) < mprotect 
+1441178 14:39:53.803452836 1 mesos-tcp-conne (23457) > mprotect 
+1441179 14:39:53.803458441 1 mesos-tcp-conne (23457) < mprotect 
+1441183 14:39:53.803503501 1 mesos-tcp-conne (23457) > mprotect 
+1441185 14:39:53.803508652 1 mesos-tcp-conne (23457) < mprotect 
+1441190 14:39:53.803529252 1 mesos-tcp-conne (23457) > mprotect 
+1441191 14:39:53.803534505 1 mesos-tcp-conne (23457) < mprotect 
+1441192 14:39:53.803541604 1 mesos-tcp-conne (23457) > mprotect 
+1441193 14:39:53.803548810 1 mesos-tcp-conne (23457) < mprotect 
+1441194 14:39:53.803593310 1 mesos-tcp-conne (23457) > mprotect 
+1441195 14:39:53.803598244 1 mesos-tcp-conne (23457) < mprotect 
+1441196 14:39:53.803605708 1 mesos-tcp-conne (23457) > mprotect 
+1441197 14:39:53.803611220 1 mesos-tcp-conne (23457) < mprotect 
+1441200 14:39:53.803659258 1 mesos-tcp-conne (23457) > switch next=11850(mesos-executor) pgft_maj=0 pgft_min=1164 vm_size=228896 vm_rss=2568 vm_swap=0 
+1465398 14:39:54.084711087 1 mesos-tcp-conne (23457) > mprotect 
+1465399 14:39:54.084720360 1 mesos-tcp-conne (23457) < mprotect 
+1465400 14:39:54.084749476 1 mesos-tcp-conne (23457) > mprotect 
+1465401 14:39:54.084756604 1 mesos-tcp-conne (23457) < mprotect 
+1465434 14:39:54.084951200 1 mesos-tcp-conne (23457) > mprotect 
+1465439 14:39:54.084958255 1 mesos-tcp-conne (23457) < mprotect 
+1465461 14:39:54.085006295 1 mesos-tcp-conne (23457) > mprotect 
+1465462 14:39:54.085012193 1 mesos-tcp-conne (23457) < mprotect 
+1465463 14:39:54.085115093 1 mesos-tcp-conne (23457) > mprotect 
+1465464 14:39:54.085122585 1 mesos-tcp-conne (23457) < mprotect 
+1465466 14:39:54.085154639 1 mesos-tcp-conne (23457) > mprotect 
+1465467 14:39:54.085160178 1 mesos-tcp-conne (23457) < mprotect 
+1465469 14:39:54.085176606 1 mesos-tcp-conne (23457) > mprotect 
+1465470 14:39:54.085183421 1 mesos-tcp-conne (23457) < mprotect 
+1465471 14:39:54.085211393 1 mesos-tcp-conne (23457) > mprotect 
+1465472 14:39:54.085217991 1 mesos-tcp-conne (23457) < mprotect 
+1465473 14:39:54.085223756 1 mesos-tcp-conne (23457) > mprotect 
+1465474 14:39:54.085239651 1 mesos-tcp-conne (23457) < mprotect 
+1465475 14:39:54.085261612 1 mesos-tcp-conne (23457) > mprotect 
+1465476 14:39:54.085268659 1 mesos-tcp-conne (23457) < mprotect 
+1465477 14:39:54.085286734 1 mesos-tcp-conne (23457) > mprotect 
+1465478 14:39:54.085292604 1 mesos-tcp-conne (23457) < mprotect 
+1465479 14:39:54.085311889 1 mesos-tcp-conne (23457) > mprotect 
+1465480 14:39:54.085317509 1 mesos-tcp-conne (23457) < mprotect 
+1465481 14:39:54.085341401 1 mesos-tcp-conne (23457) > mprotect 
+1465482 14:39:54.085346281 1 mesos-tcp-conne (23457) < mprotect 
+1465483 14:39:54.085407951 1 mesos-tcp-conne (23457) > mprotect 
+1465484 14:39:54.085418770 1 mesos-tcp-conne (23457) < mprotect 
+1465485 14:39:54.085434083 1 mesos-tcp-conne (23457) > mprotect 
+1465486 14:39:54.085441520 1 mesos-tcp-conne (23457) < mprotect 
+1465487 14:39:54.085605067 1 mesos-tcp-conne (23457) > mmap addr=0 length=4096 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=4294967295 offset=0 
+1465488 14:39:54.085623677 1 mesos-tcp-conne (23457) < mmap res=7F0969DBF000 vm_size=228900 vm_rss=3872 vm_swap=0 
+1465489 14:39:54.085646084 1 mesos-tcp-conne (23457) > mprotect 
+1465490 14:39:54.085653102 1 mesos-tcp-conne (23457) < mprotect 
+1465492 14:39:54.089357415 1 mesos-tcp-conne (23457) > switch next=7 pgft_maj=0 pgft_min=4122 vm_size=228900 vm_rss=14424 vm_swap=0 
+1467674 14:39:54.116660792 0 mesos-tcp-conne (23457) > switch next=8 pgft_maj=0 pgft_min=4247 vm_size=228900 vm_rss=14952 vm_swap=0 
+1471827 14:39:54.153574903 0 mesos-tcp-conne (23457) > switch next=13683(mesos-executor) pgft_maj=0 pgft_min=4672 vm_size=228900 vm_rss=16800 vm_swap=0 
+1487345 14:39:54.349433060 1 mesos-tcp-conne (23457) > switch next=7 pgft_maj=0 pgft_min=5229 vm_size=228900 vm_rss=18912 vm_swap=0 
+1499670 14:39:54.527955300 1 mesos-tcp-conne (23457) > switch next=11325(mesos-executor) pgft_maj=0 pgft_min=5773 vm_size=228900 vm_rss=21024 vm_swap=0 
+1524012 14:39:54.802457068 1 mesos-tcp-conne (23457) > switch next=14211(mesos-executor) pgft_maj=0 pgft_min=6018 vm_size=228900 vm_rss=22080 vm_swap=0 
+1538851 14:39:54.944646147 1 mesos-tcp-conne (23457) > switch next=9 pgft_maj=0 pgft_min=8261 vm_size=228900 vm_rss=31056 vm_swap=0 
+1567028 14:39:55.204135738 1 mesos-tcp-conne (23457) > mmap addr=0 length=8192 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=4294967295 offset=0 
+1567029 14:39:55.204142661 1 mesos-tcp-conne (23457) < mmap res=7F0969DBD000 vm_size=228908 vm_rss=33696 vm_swap=0 
+1567036 14:39:55.205727535 1 mesos-tcp-conne (23457) > switch next=7 pgft_maj=0 pgft_min=9668 vm_size=228908 vm_rss=36592 vm_swap=0 
+1579497 14:39:55.322354936 1 mesos-tcp-conne (23457) > switch next=12790(mesos-executor) pgft_maj=0 pgft_min=9947 vm_size=228908 vm_rss=37648 vm_swap=0 
+1586583 14:39:55.400415746 1 mesos-tcp-conne (23457) > switch next=14177(mesos-executor) pgft_maj=0 pgft_min=11021 vm_size=228908 vm_rss=42136 vm_swap=0 
+1593916 14:39:55.478729245 1 mesos-tcp-conne (23457) > mmap addr=0 length=16384 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=4294967295 offset=0 
+1593917 14:39:55.478734968 1 mesos-tcp-conne (23457) < mmap res=7F0969DB9000 vm_size=228924 vm_rss=43456 vm_swap=0 
+1593927 14:39:55.479935408 1 mesos-tcp-conne (23457) > switch next=23058(sysdig) pgft_maj=0 pgft_min=11514 vm_size=228924 vm_rss=43968 vm_swap=0 
+1608652 14:39:55.626109590 1 mesos-tcp-conne (23457) > switch next=12401(mesos-executor) pgft_maj=0 pgft_min=12589 vm_size=228924 vm_rss=48456 vm_swap=0 
+1612548 14:39:55.690116323 1 mesos-tcp-conne (23457) > mprotect 
+1612549 14:39:55.690133017 1 mesos-tcp-conne (23457) < mprotect 
+1612550 14:39:55.690166335 1 mesos-tcp-conne (23457) > mprotect 
+1612551 14:39:55.690173115 1 mesos-tcp-conne (23457) < mprotect 
+1612552 14:39:55.690184491 1 mesos-tcp-conne (23457) > mprotect 
+1612553 14:39:55.690193876 1 mesos-tcp-conne (23457) < mprotect 
+1612554 14:39:55.690196478 1 mesos-tcp-conne (23457) > munmap addr=7F0969DD9000 length=42048 
+1612555 14:39:55.690204823 1 mesos-tcp-conne (23457) < munmap res=0 vm_size=228880 vm_rss=50668 vm_swap=0 
+1612556 14:39:55.690212409 1 mesos-tcp-conne (23457) > set_tid_address 
+1612557 14:39:55.690214068 1 mesos-tcp-conne (23457) < set_tid_address 
+1612558 14:39:55.690215356 1 mesos-tcp-conne (23457) > set_robust_list 
+1612559 14:39:55.690216524 1 mesos-tcp-conne (23457) < set_robust_list 
+1612560 14:39:55.690217591 1 mesos-tcp-conne (23457) > futex addr=7FFF39A71C20 op=393(FUTEX_CLOCK_REALTIME|FUTEX_PRIVATE_FLAG|FUTEX_WAIT_BITSET) val=1 
+1612561 14:39:55.690219603 1 mesos-tcp-conne (23457) < futex res=-11(EAGAIN) 
+1612562 14:39:55.690223954 1 mesos-tcp-conne (23457) > rt_sigaction 
+1612563 14:39:55.690225540 1 mesos-tcp-conne (23457) < rt_sigaction 
+1612564 14:39:55.690226686 1 mesos-tcp-conne (23457) > rt_sigaction 
+1612565 14:39:55.690227650 1 mesos-tcp-conne (23457) < rt_sigaction 
+1612566 14:39:55.690228763 1 mesos-tcp-conne (23457) > rt_sigprocmask 
+1612567 14:39:55.690230570 1 mesos-tcp-conne (23457) < rt_sigprocmask 
+1612568 14:39:55.690237201 1 mesos-tcp-conne (23457) > getrlimit resource=3(RLIMIT_STACK) 
+1612569 14:39:55.690239154 1 mesos-tcp-conne (23457) < getrlimit res=0 cur=8388608 max=-1 
+1612570 14:39:55.690327545 1 mesos-tcp-conne (23457) > brk addr=0 
+1612571 14:39:55.690329378 1 mesos-tcp-conne (23457) < brk res=132D000 vm_size=228880 vm_rss=50668 vm_swap=0 
+1612572 14:39:55.690330648 1 mesos-tcp-conne (23457) > brk addr=134E000 
+1612573 14:39:55.690333973 1 mesos-tcp-conne (23457) < brk res=134E000 vm_size=229012 vm_rss=50668 vm_swap=0 
+1612574 14:39:55.690353678 1 mesos-tcp-conne (23457) > futex addr=7F095D740400 op=129(FUTEX_PRIVATE_FLAG|FUTEX_WAKE) val=2147483647 
+1612575 14:39:55.690357892 1 mesos-tcp-conne (23457) < futex res=0 
+1612576 14:39:55.690452625 1 mesos-tcp-conne (23457) > futex addr=7F0962D7994C op=129(FUTEX_PRIVATE_FLAG|FUTEX_WAKE) val=2147483647 
+1612577 14:39:55.690455872 1 mesos-tcp-conne (23457) < futex res=0 
+1612578 14:39:55.690488114 1 mesos-tcp-conne (23457) > futex addr=7F0962D79958 op=129(FUTEX_PRIVATE_FLAG|FUTEX_WAKE) val=2147483647 
+1612579 14:39:55.690491158 1 mesos-tcp-conne (23457) < futex res=0 
+1612611 14:39:55.692323339 1 mesos-tcp-conne (23457) > switch next=23058(sysdig) pgft_maj=0 pgft_min=14375 vm_size=229012 vm_rss=55388 vm_swap=0 
+1621341 14:39:55.779705348 1 mesos-tcp-conne (23457) > brk addr=136F000 
+1621342 14:39:55.779711719 1 mesos-tcp-conne (23457) < brk res=136F000 vm_size=229144 vm_rss=55652 vm_swap=0 
+1621344 14:39:55.780636040 1 mesos-tcp-conne (23457) > switch next=7 pgft_maj=0 pgft_min=14638 vm_size=229144 vm_rss=56444 vm_swap=0 
+1627093 14:39:55.839973838 1 mesos-tcp-conne (23457) > brk addr=1390000 
+1627094 14:39:55.839981452 1 mesos-tcp-conne (23457) < brk res=1390000 vm_size=229276 vm_rss=58552 vm_swap=0 
+1627122 14:39:55.840675937 1 mesos-tcp-conne (23457) > switch next=7 pgft_maj=0 pgft_min=15398 vm_size=229276 vm_rss=59604 vm_swap=0 
+1628396 14:39:55.859461087 1 mesos-tcp-conne (23457) > socket domain=2(AF_INET) type=1 proto=0 
+1628397 14:39:55.859474892 1 mesos-tcp-conne (23457) < socket fd=3(<4>) 
+1628398 14:39:55.859484430 1 mesos-tcp-conne (23457) > fstat fd=1(<p>) 
+1628399 14:39:55.859486789 1 mesos-tcp-conne (23457) < fstat res=0 
+1628400 14:39:55.859488781 1 mesos-tcp-conne (23457) > mmap addr=0 length=4096 prot=3(PROT_READ|PROT_WRITE) flags=10(MAP_PRIVATE|MAP_ANONYMOUS) fd=4294967295 offset=0 
+1628401 14:39:55.859493492 1 mesos-tcp-conne (23457) < mmap res=7F0969DE3000 vm_size=229280 vm_rss=61448 vm_swap=0 
+1628402 14:39:55.859508031 1 mesos-tcp-conne (23457) > write fd=1(<p>) size=30 
+1628403 14:39:55.859519917 1 mesos-tcp-conne (23457) > switch next=12425(mesos-executor) pgft_maj=0 pgft_min=15882 vm_size=229280 vm_rss=61448 vm_swap=0 
+1628415 14:39:55.859904463 1 mesos-tcp-conne (23457) < write res=30 data=Connecting to 127.0.0.1:31523. 
+1628416 14:39:55.859910539 1 mesos-tcp-conne (23457) > connect fd=3(<4>) 
+1628417 14:39:55.859975925 1 mesos-tcp-conne (23457) > switch next=12516(nc) pgft_maj=0 pgft_min=15883 vm_size=229280 vm_rss=61448 vm_swap=0 
+1628421 14:39:55.859994675 1 mesos-tcp-conne (23457) < connect res=0 tuple=127.0.0.1:50234->127.0.0.1:31523 
+1628422 14:39:55.859998858 1 mesos-tcp-conne (23457) > write fd=1(<p>) size=40 
+1628423 14:39:55.860003257 1 mesos-tcp-conne (23457) > switch next=12425(mesos-executor) pgft_maj=0 pgft_min=15883 vm_size=229280 vm_rss=61448 vm_swap=0 
+1628435 14:39:55.860163274 1 mesos-tcp-conne (23457) < write res=40 data=Successfully established TCP connection. 
+1628436 14:39:55.860167189 1 mesos-tcp-conne (23457) > shutdown fd=3(<4t>127.0.0.1:50234->127.0.0.1:31523) how=2(SHUT_RDWR) 
+1628437 14:39:55.860183964 1 mesos-tcp-conne (23457) > switch next=12516(nc) pgft_maj=0 pgft_min=15883 vm_size=229280 vm_rss=61448 vm_swap=0 
+1628447 14:39:55.860223802 1 mesos-tcp-conne (23457) < shutdown res=0 
+1628448 14:39:55.860226553 1 mesos-tcp-conne (23457) > close fd=3(<4t>127.0.0.1:50234->127.0.0.1:31523) 
+1628449 14:39:55.860227709 1 mesos-tcp-conne (23457) < close res=0 
+1628450 14:39:55.860305978 1 mesos-tcp-conne (23457) > exit_group 
+1628452 14:39:55.861510935 1 mesos-tcp-conne (23457) > switch next=7 pgft_maj=0 pgft_min=15952 vm_size=0 vm_rss=0 vm_swap=0 
+1628733 14:39:55.869686173 1 mesos-tcp-conne (23457) > procexit status=0 

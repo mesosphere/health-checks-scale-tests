@@ -1,0 +1,32 @@
+vagrant@vagrant-ubuntu-trusty-64:~$ sysdig -r cap.scap.gz0 proc.pid=23457 and evt.type!=mmap and evt.type!=mprotect | grep switch
+1430150 14:39:53.674159724 0 mesos-executor (23457) > switch next=13 pgft_maj=0 pgft_min=401 vm_size=894576 vm_rss=6188 vm_swap=0 
+1430608 14:39:53.676643551 1 mesos-tcp-conne (23457) > switch next=7 pgft_maj=0 pgft_min=550 vm_size=155180 vm_rss=500 vm_swap=0 
+1441200 14:39:53.803659258 1 mesos-tcp-conne (23457) > switch next=11850(mesos-executor) pgft_maj=0 pgft_min=1164 vm_size=228896 vm_rss=2568 vm_swap=0 
+1465492 14:39:54.089357415 1 mesos-tcp-conne (23457) > switch next=7 pgft_maj=0 pgft_min=4122 vm_size=228900 vm_rss=14424 vm_swap=0 
+1467674 14:39:54.116660792 0 mesos-tcp-conne (23457) > switch next=8 pgft_maj=0 pgft_min=4247 vm_size=228900 vm_rss=14952 vm_swap=0 
+1471827 14:39:54.153574903 0 mesos-tcp-conne (23457) > switch next=13683(mesos-executor) pgft_maj=0 pgft_min=4672 vm_size=228900 vm_rss=16800 vm_swap=0 
+1487345 14:39:54.349433060 1 mesos-tcp-conne (23457) > switch next=7 pgft_maj=0 pgft_min=5229 vm_size=228900 vm_rss=18912 vm_swap=0 
+1499670 14:39:54.527955300 1 mesos-tcp-conne (23457) > switch next=11325(mesos-executor) pgft_maj=0 pgft_min=5773 vm_size=228900 vm_rss=21024 vm_swap=0 
+1524012 14:39:54.802457068 1 mesos-tcp-conne (23457) > switch next=14211(mesos-executor) pgft_maj=0 pgft_min=6018 vm_size=228900 vm_rss=22080 vm_swap=0 
+1538851 14:39:54.944646147 1 mesos-tcp-conne (23457) > switch next=9 pgft_maj=0 pgft_min=8261 vm_size=228900 vm_rss=31056 vm_swap=0 
+1567036 14:39:55.205727535 1 mesos-tcp-conne (23457) > switch next=7 pgft_maj=0 pgft_min=9668 vm_size=228908 vm_rss=36592 vm_swap=0 
+1579497 14:39:55.322354936 1 mesos-tcp-conne (23457) > switch next=12790(mesos-executor) pgft_maj=0 pgft_min=9947 vm_size=228908 vm_rss=37648 vm_swap=0 
+1586583 14:39:55.400415746 1 mesos-tcp-conne (23457) > switch next=14177(mesos-executor) pgft_maj=0 pgft_min=11021 vm_size=228908 vm_rss=42136 vm_swap=0 
+1593927 14:39:55.479935408 1 mesos-tcp-conne (23457) > switch next=23058(sysdig) pgft_maj=0 pgft_min=11514 vm_size=228924 vm_rss=43968 vm_swap=0 
+1608652 14:39:55.626109590 1 mesos-tcp-conne (23457) > switch next=12401(mesos-executor) pgft_maj=0 pgft_min=12589 vm_size=228924 vm_rss=48456 vm_swap=0 
+1612611 14:39:55.692323339 1 mesos-tcp-conne (23457) > switch next=23058(sysdig) pgft_maj=0 pgft_min=14375 vm_size=229012 vm_rss=55388 vm_swap=0 
+1621344 14:39:55.780636040 1 mesos-tcp-conne (23457) > switch next=7 pgft_maj=0 pgft_min=14638 vm_size=229144 vm_rss=56444 vm_swap=0 
+1627122 14:39:55.840675937 1 mesos-tcp-conne (23457) > switch next=7 pgft_maj=0 pgft_min=15398 vm_size=229276 vm_rss=59604 vm_swap=0 
+1628403 14:39:55.859519917 1 mesos-tcp-conne (23457) > switch next=12425(mesos-executor) pgft_maj=0 pgft_min=15882 vm_size=229280 vm_rss=61448 vm_swap=0 
+1628417 14:39:55.859975925 1 mesos-tcp-conne (23457) > switch next=12516(nc) pgft_maj=0 pgft_min=15883 vm_size=229280 vm_rss=61448 vm_swap=0 
+1628423 14:39:55.860003257 1 mesos-tcp-conne (23457) > switch next=12425(mesos-executor) pgft_maj=0 pgft_min=15883 vm_size=229280 vm_rss=61448 vm_swap=0 
+1628437 14:39:55.860183964 1 mesos-tcp-conne (23457) > switch next=12516(nc) pgft_maj=0 pgft_min=15883 vm_size=229280 vm_rss=61448 vm_swap=0 
+1628452 14:39:55.861510935 1 mesos-tcp-conne (23457) > switch next=7 pgft_maj=0 pgft_min=15952 vm_size=0 vm_rss=0 vm_swap=0 
+
+
+vagrant@vagrant-ubuntu-trusty-64:~$ ps --pid 7,8,9,13
+  PID TTY          TIME CMD
+    7 ?        00:00:26 rcu_sched
+    8 ?        00:00:16 rcuos/0
+    9 ?        00:00:08 rcuos/1
+   13 ?        00:00:00 migration/0

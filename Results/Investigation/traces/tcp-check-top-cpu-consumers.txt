@@ -1,0 +1,13 @@
+vagrant@vagrant-ubuntu-trusty-64:~$ sysdig -r cap.scap.gz0 -c topprocs_cpu
+CPU%                Process             PID
+--------------------------------------------------------------------------------
+35.88%              sysdig              23058
+0.95%               mesos-agent         30402
+0.91%               mesos-executor      12055
+0.76%               mesos-executor      12668
+0.69%               mesos-executor      14066
+0.69%               mesos-executor      11728
+0.65%               mesos-executor      13531
+0.65%               mesos-executor      12361
+0.65%               mesos-executor      11607
+0.65%               mesos-executor      11835
